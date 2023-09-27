@@ -38,7 +38,7 @@ export default function HomeNavbar() {
               <NavLink
                 activeClassName='active'
                 className='nav-link'
-                to='/'
+                to='/indiclinicweb'
               >
                 Home
               </NavLink>

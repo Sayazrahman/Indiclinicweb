@@ -5,7 +5,7 @@ export default function ApiRoutes() {
   return (
     <>
     <Routes>
-   <Route path="/" element={<LayoutLoginPanel/>} />
+   <Route path="/indiclinicweb" element={<LayoutLoginPanel/>} />
    
 </Routes>
     

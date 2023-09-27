@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Indiclinicweb/static/css/main.d61dcbd7.css",
-    "main.js": "/Indiclinicweb/static/js/main.7e22d6f0.js",
+    "main.js": "/Indiclinicweb/static/js/main.143b84d8.js",
     "static/js/787.ab0d53d4.chunk.js": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js",
     "static/media/LoginPage.jpg": "/Indiclinicweb/static/media/LoginPage.91028f958907abeda2eb.jpg",
     "static/media/HomeLogo.jpg": "/Indiclinicweb/static/media/HomeLogo.a33f216f060df9b9bbef.jpg",
@@ -11,11 +11,11 @@
     "static/media/lock-solid.svg": "/Indiclinicweb/static/media/lock-solid.e87aad8fe7fe0fa31647cec2cc852ba9.svg",
     "static/media/chevron-down.svg": "/Indiclinicweb/static/media/chevron-down.8624f04faf16b2d07c00235d9dc68ae2.svg",
     "main.d61dcbd7.css.map": "/Indiclinicweb/static/css/main.d61dcbd7.css.map",
-    "main.7e22d6f0.js.map": "/Indiclinicweb/static/js/main.7e22d6f0.js.map",
+    "main.143b84d8.js.map": "/Indiclinicweb/static/js/main.143b84d8.js.map",
     "787.ab0d53d4.chunk.js.map": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d61dcbd7.css",
-    "static/js/main.7e22d6f0.js"
+    "static/js/main.143b84d8.js"
   ]
 }

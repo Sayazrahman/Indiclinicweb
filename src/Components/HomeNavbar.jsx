@@ -18,7 +18,7 @@ export default function HomeNavbar() {
     <>
    <div className={`MainNav ${isSidebarOpen ? 'sidebar-open' : ''}`}>
   <header className='header header-custom header-fixed header-one header-space'>
-    <div className='container'>
+    <div className='container Navcontainer'>
       <nav className='navbar navbar-expand-lg navbar '>
         <button
           className='navbar-toggler'

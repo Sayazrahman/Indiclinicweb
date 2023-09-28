@@ -6,9 +6,9 @@ export default function Footer() {
     
     <footer className='footer'>
     <div className="container footerContainer mt-2">
-        <div className='aboutSection' style={{width: '17vw'}}>
-        <img className='HomeNavLogo mt-4' src={HomeLogo} style={{width: "17vw", height: '10vh'}}/>
-        <div style={{width: '17vw',textAlign: 'center'}}><p style={{fontWeight: 'bold',color: 'gray',fontSize: '13px'}}>Your one-stop destination for healthcare. Find trusted doctors, book appointments, consult online, and purchase medicines conveniently. Your well-being, our priority</p></div>
+        <div className='aboutSection'>
+        <img className='HomeNavLogo mt-4' src={HomeLogo}/>
+        <div className = "info"><p >Your one-stop destination for healthcare. Find trusted doctors, book appointments, consult online, and purchase medicines conveniently. Your well-being, our priority</p></div>
         </div>
         <div className='mt-4'>
         <h4 className='ms-4' style={{textAlign: 'center'}}>For Patients</h4>
@@ -26,7 +26,7 @@ export default function Footer() {
             <li>Login</li>
             </ul>
             </div>
-            <div  className='mt-4'  >
+            <div  className='mt-4 me-5'  >
                 <h4 > Contact Us</h4>
                 <li>sarfarazganj, Lucknow</li>
                 <li>7979847221</li>

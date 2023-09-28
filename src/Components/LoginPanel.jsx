@@ -67,7 +67,7 @@ document.getElementById("emailValidation").style.display = "block";
     <div className='loginBody'>
         <div className='container mainContainer mt-4'>
 <div className='mt-2 navlogo'>
-    <img src={loginPage} style={{width: "36vw", height: '82vh'}}></img>
+    <img src={loginPage} ></img>
 </div>
 
 <div className='inputContainer mt-2'>
@@ -81,7 +81,7 @@ document.getElementById("emailValidation").style.display = "block";
     </div>
     <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
     <div style={{margin: 'auto',textAlign: 'center'}}>
-         <button className='btn btn mainLoginbutton'  onClick={handleLoginAsPateint}>{loginProfile}</button>
+         <button className='btn btn-sucess mainLoginbutton'  onClick={handleLoginAsPateint}>{loginProfile}</button>
 <hr/>
 <button className='btn btn OtpmainBtn'>Login through OTP</button>  
     </div>

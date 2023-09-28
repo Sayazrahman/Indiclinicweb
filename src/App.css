@@ -197,6 +197,7 @@ background-color: #8fc5ff;
     min-width: 100%;
     margin-left: 50px;
     max-height: 90vh;
+    margin: auto;
 
   }
   .inputContainer .inputfield {

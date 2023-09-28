@@ -61,11 +61,7 @@
 .sidebar-open ul{
   display: none;
 }
-.sidebar-open .HomeBtn{
-  
-    display: none;
-  
-}
+
 
 .navbar-toggler{
   border: none;
@@ -161,10 +157,10 @@
 }
 @media(max-width: 1000px){
   .HomeBtn{
-    display: none;
+    width: auto
   }
   .navbtn{
-    display: none;
+    display: auto;
   }
 }
 .navbtn{
@@ -180,7 +176,7 @@
 @media(max-width: 1000px){
  
   .navbtn{
-    width: 20vw;
+    width: auto;
   }
 }
 .registerbtn{
@@ -193,7 +189,19 @@
 @media(max-width: 1000px){
  
   .registerbtn{
-    width: 20vw;
+    display: none;
+  }
+  .navbtn{
+    display: none;
+  }
+}
+@media(min-width: 1000px){
+ 
+  .registerbtn{
+    width: 12vw;
+  }
+  .navbtn{
+    width: 10vw;
   }
 }
 
@@ -211,7 +219,7 @@ background-color: #8fc5ff;
 }
 @media(max-width: 912px){
   .loginBody{
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media(max-width: 768px){
@@ -227,7 +235,7 @@ background-color: #8fc5ff;
 }
 @media(max-width: 912px){
   .mainContainer{
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media(max-width: 768px){
@@ -262,7 +270,7 @@ background-color: #8fc5ff;
 @media(max-width : 912px){
   .inputContainer{
     width: 100%;
-    height: 50vh;
+    height: 65vh;
   
   }
   .inputContainer button {

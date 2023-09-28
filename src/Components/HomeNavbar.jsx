@@ -28,7 +28,7 @@ export default function HomeNavbar() {
           <span className='navbar-toggler-icon'></span>
         </button>
 
-        <div className='logo' style={{margin: 'auto'}}>
+        <div className='logo mt-0' style={{margin: 'auto'}}>
           <img className='HomeNavLogo mt-4' src={HomeLogo} alt='Logo' />
         </div>
 
@@ -40,6 +40,7 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/indiclinicweb'
               >
+                <i class="bi bi-chevron-compact-down"></i>
                 Home
               </NavLink>
             </li>

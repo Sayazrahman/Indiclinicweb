@@ -155,6 +155,10 @@
  
   height: 7vh;
 }
+.HomeBtn a {
+  text-decoration: none;
+  color: black;
+}
 @media(max-width: 1000px){
   .HomeBtn{
     width: auto
@@ -181,7 +185,7 @@
 }
 .registerbtn{
   background-color: white;
-  width: 8vw;
+  width: 9vw;
   font-weight: 600;
   border : 1px solid gray;
  color: black 
@@ -198,10 +202,11 @@
 @media(min-width: 1000px){
  
   .registerbtn{
-    width: 12vw;
+    width: 9vw;
   }
   .navbtn{
-    width: 10vw;
+    width: 9vw;
+    
   }
 }
 
@@ -219,7 +224,7 @@ background-color: #8fc5ff;
 }
 @media(max-width: 912px){
   .loginBody{
-    height: 70vh;
+    height: 80vh;
   }
 }
 @media(max-width: 768px){
@@ -269,13 +274,13 @@ background-color: #8fc5ff;
 
 @media(max-width : 912px){
   .inputContainer{
-    width: 100%;
-    height: 65vh;
+    width: 80%;
+    height: 75vh;
   
   }
   .inputContainer button {
     width: 70%;
-    height: 4vh;
+    height: 7vh;
   }
   .inputContainer .inputfield input{
     height: 5vh;
@@ -568,5 +573,11 @@ color: black;
     left: -250px;
   }
 }
+   /* User Registration css started */
 
-
+   .Registration-container{
+    border: 1px solid rgb(240, 237, 237);
+    margin-top: 10px;
+    padding: 50px;
+    border-radius: 10px;
+   }

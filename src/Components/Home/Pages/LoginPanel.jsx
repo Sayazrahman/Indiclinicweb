@@ -1,11 +1,6 @@
 import React from 'react'
-import HomeLogo from '../assets/HomeLogo.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import LoginLogo from '../assets/Icons/lock-solid.svg'
-import userregular from '../assets/Icons/user-regular.svg'
-import loginPage from "../assets/LoginPage.jpg"
-import chevrondown from "../assets/Icons/chevron-down.svg"
-import menu from "../assets/Icons/bars-solid.svg"
+
+import loginPage from "../../../assets/LoginPage.jpg"
 import {useState} from 'react'
 export default function LoginPanel() {
     const [loginProfile , setLoginProfile] = useState("Login as Patient")

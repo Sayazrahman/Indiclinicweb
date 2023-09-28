@@ -1,12 +1,12 @@
 import React from 'react'
-import HomeLogo from '../assets/HomeLogo.jpg'
-import menu from "../assets/Icons/bars-solid.svg"
-import LoginLogo from '../assets/Icons/lock-solid.svg'
-import userregular from '../assets/Icons/user-regular.svg'
-import chevrondown from "../assets/Icons/chevron-down.svg"
+import HomeLogo from '../../../assets/HomeLogo.jpg'
+
+import LoginLogo from '../../../assets/Icons/lock-solid.svg'
+import userregular from '../../../assets/Icons/user-regular.svg'
+
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import Sidebar from './Home/Sidebar'
+import Sidebar from './Sidebar'
 
 export default function HomeNavbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -33,75 +33,69 @@ export default function HomeNavbar() {
         </div>
 
         <div className='collapse navbar-collapse' id='navbarNav'>
-          <ul className='navbar-nav ml-auto'>
+          <ul className='navbar-nav ml-auto ms-5'>
             <li className='nav-item'>
-              <NavLink
-                activeClassName='active'
+              <Link
+              
                 className='nav-link'
-                to='/indiclinicweb'
+                to='/Indiclinicweb'
               >
-                <i class="bi bi-chevron-compact-down"></i>
+                
                 Home
-              </NavLink>
+              </Link>
             </li>
             <li className='nav-item'>
-              <NavLink
-                activeClassName='active'
+              <Link
+                
                 className='nav-link'
                 to='/patients'
               >
                 Patients
-              </NavLink>
+              </Link>
             </li>
             <li className='nav-item'>
-              <NavLink
-                activeClassName='active'
+              <Link
+                activeclassname='active'
                 className='nav-link'
                 to='/doctors'
               >
                 Doctors
-              </NavLink>
+              </Link>
             </li>
             <li className='nav-item'>
-              <NavLink
-                activeClassName='active'
+              <Link
+                activeclassname='active'
                 className='nav-link'
                 to='/pharmacy'
               >
                 Pharmacy
-              </NavLink>
+              </Link>
             </li>
             <li className='nav-item'>
-              <NavLink
-                activeClassName='active'
+              <Link
+                activeclassname='active'
                 className='nav-link'
                 to='/admin'
               >
                 Admin
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className='HomeBtn mt-4'>
-          <button className='btn btn-primary registerbtn mx-2 mt-1'>
+          <button className='btn btn registerbtn mx-2 mt-1'>
+         
             <img
               className='me-2'
               src={userregular}
               alt='User Icon'
               style={{width: '1vw', height : '1vw'}}
             />
-            Register
+            
+            <Link className='nav-item' to= "/UserRegistration">Register</Link>
           </button>
-          <button className='btn btn-success navbtn mt-1'>  <img
-              className='me-2'
-              src={LoginLogo}
-              alt='Login Icon'
-              style={{width: '1vw', height : '1vw'}}
-            />Login
-           
-        
-          </button>
+          <button className='btn btn-success navbtn mt-1'> <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>Login</button>
         </div>
       </nav>
     </div>

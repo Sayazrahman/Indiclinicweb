@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import chevrondown from "../../assets/Icons/chevron-down.svg"
+import chevrondown from "../../../assets/Icons/chevron-down.svg"
 export default function Sidebar({ isOpen, onClose }) {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLogo from '../assets/HomeLogo.jpg'
+import HomeLogo from '../../../assets/HomeLogo.jpg'
 export default function Footer() {
   return (
     <>

@@ -95,7 +95,7 @@ export default function HomeNavbar() {
             
             <Link className='nav-item' to= "/UserRegistration">Register</Link>
           </button>
-          <button className='btn btn-success navbtn mt-1'> <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>Login</button>
+          <button className='btn btn-success navbtn mt-1'> <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
         </div>
       </nav>
     </div>

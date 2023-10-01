@@ -1,5 +1,5 @@
 import React from 'react'
-
+import eye from "../../../assets/Icons/eye.svg"
 import loginPage from "../../../assets/LoginPage.jpg"
 import {useState} from 'react'
 export default function LoginPanel() {
@@ -7,6 +7,7 @@ export default function LoginPanel() {
     const [profileSwitch, setprofileSwitch] = useState("Are you a Doctor ?")
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
   
 
   
@@ -56,6 +57,10 @@ document.getElementById("emailValidation").style.display = "block";
     alert("Logged In successfully")
    }
       }
+
+      const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+      };
   return (
  <>
  <section>
@@ -71,7 +76,14 @@ document.getElementById("emailValidation").style.display = "block";
     <div className='inputfield'>
   <input value={email} name='Email' type='text' placeholder='Email or Phone No.' onChange={handleOnchange}/><br></br>
   <span id="emailValidation" class="invalid-feedback mx-2" style={{display: 'none'}}></span>
-  <input value={password} name='password' className='mt-3' type='password' onChange={handleOnchange} placeholder='Password'/>
+  <input value={password} name='password' className='mt-3' type={showPassword ? 'text' : 'password'} onChange={handleOnchange} placeholder='Password'/>
+  <span  onClick={togglePasswordVisibility} >
+            {showPassword ? (
+              <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} />// Replace with your eye icon
+            ) : (
+              <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} /> // Replace with your eye icon
+            )}
+          </span>
   <span id="passwordValidation" class="invalid-feedback mx-4" style={{display: 'none'}}></span>
     </div>
     <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>

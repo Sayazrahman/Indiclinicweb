@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Indiclinicweb/static/css/main.3718c655.css",
-    "main.js": "/Indiclinicweb/static/js/main.a2807cf4.js",
+    "main.css": "/Indiclinicweb/static/css/main.b22c2d11.css",
+    "main.js": "/Indiclinicweb/static/js/main.af0513c5.js",
     "static/js/787.ab0d53d4.chunk.js": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js",
+    "static/media/doctor-banner.png": "/Indiclinicweb/static/media/doctor-banner.b5c05e05c35b2bf2820c.png",
     "static/media/LoginPage.jpg": "/Indiclinicweb/static/media/LoginPage.91028f958907abeda2eb.jpg",
-    "static/media/banner-img.png": "/Indiclinicweb/static/media/banner-img.006b775288d9aab46e5e.png",
+    "static/media/HomeLogo.jpg": "/Indiclinicweb/static/media/HomeLogo.7d1ef6f2f4f421420684.jpg",
     "static/media/registration-banner.png": "/Indiclinicweb/static/media/registration-banner.ece4acf86598eb59a48d.png",
     "static/media/1496.gif": "/Indiclinicweb/static/media/1496.f76dc98dfb3de2c67b9e.gif",
-    "static/media/HomeLogo.jpg": "/Indiclinicweb/static/media/HomeLogo.a33f216f060df9b9bbef.jpg",
     "static/media/banner-img3.png": "/Indiclinicweb/static/media/banner-img3.813811ab77d28b8c6fce.png",
     "static/media/banner-img2.png": "/Indiclinicweb/static/media/banner-img2.b0810c78d29e38b63ffb.png",
     "index.html": "/Indiclinicweb/index.html",
@@ -17,12 +17,12 @@
     "static/media/lock-solid.svg": "/Indiclinicweb/static/media/lock-solid.e87aad8fe7fe0fa31647cec2cc852ba9.svg",
     "static/media/arrow-counterclockwise.svg": "/Indiclinicweb/static/media/arrow-counterclockwise.48745dc8e6d9b1a2f8ec987bc9867fdf.svg",
     "static/media/chevron-down.svg": "/Indiclinicweb/static/media/chevron-down.8624f04faf16b2d07c00235d9dc68ae2.svg",
-    "main.3718c655.css.map": "/Indiclinicweb/static/css/main.3718c655.css.map",
-    "main.a2807cf4.js.map": "/Indiclinicweb/static/js/main.a2807cf4.js.map",
+    "main.b22c2d11.css.map": "/Indiclinicweb/static/css/main.b22c2d11.css.map",
+    "main.af0513c5.js.map": "/Indiclinicweb/static/js/main.af0513c5.js.map",
     "787.ab0d53d4.chunk.js.map": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3718c655.css",
-    "static/js/main.a2807cf4.js"
+    "static/css/main.b22c2d11.css",
+    "static/js/main.af0513c5.js"
   ]
 }

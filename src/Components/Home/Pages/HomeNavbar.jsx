@@ -6,6 +6,7 @@ import userregular from '../../../assets/Icons/user-regular.svg'
 
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import chevron from '../../../assets/Icons/chevron-down.svg'
 import Sidebar from './Sidebar'
 
 export default function HomeNavbar() {
@@ -41,16 +42,7 @@ export default function HomeNavbar() {
                 to='/Indiclinicweb'
               >
                 
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                
-                className='nav-link'
-                to='/patients'
-              >
-                Patients
+               Home  <img src={chevron} />
               </Link>
             </li>
             <li className='nav-item'>
@@ -59,7 +51,7 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/doctors'
               >
-                Doctors
+                Doctors <img src={chevron} />
               </Link>
             </li>
             <li className='nav-item'>
@@ -68,7 +60,7 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/pharmacy'
               >
-                Pharmacy
+                Pharmacy <img src={chevron} />
               </Link>
             </li>
             <li className='nav-item'>
@@ -77,7 +69,7 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/admin'
               >
-                Admin
+                Admin <img src={chevron} />
               </Link>
             </li>
           </ul>

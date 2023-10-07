@@ -1,21 +1,27 @@
-*{
-  margin: 0;
-  padding: 0
+body {
+
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  height: 100%;
+  overflow-x: hidden;
 }
-.header{
- 
-  background: #F2F6F6;
-  position: sticky;
-  display: flex;
+.header {
+  position: fixed;
+  display: block;
   width: 100%;
   z-index: 9999;
-  box-shadow: inherit;
-  transition: margin-right 0.5s;
+  background: rgba(224, 255, 225, 0.9); /* Background color with transparency */
+  backdrop-filter: blur(5px); /* Apply a blur effect to create a glass effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border at the bottom */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: background-color 0.3s ease; /* Smooth color transition on scroll/hover */
 }
-@media(max-width: 768px){
+
+/* @media(max-width: 768px){
   .header{
+    
     width: 100%;
-    height: 15vh;
+    height: 18vh;
   }
   .MainNav{
     width : 100%
@@ -27,7 +33,7 @@
 @media(max-width : 912px){
   .header{
     width: 100%;
-    height: 12vh;
+    height: 15vh;
   }
   .MainNav{
     width : 100%
@@ -38,7 +44,7 @@
   .Navcontainer{
     width : 100%
   }
-}
+} */
 .sidebar-open .header {
   margin-left: 250px; /* Adjust the width based on your sidebar width */
   width: calc(100% - 250px);
@@ -88,7 +94,7 @@
 .navContainer{
   /* background-color: red; */
   display: flex;
-  height: 16vh;
+  /* height: 16vh; */
   
 }
 
@@ -116,7 +122,7 @@
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100px;
+  /* height: 100px; */
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -133,14 +139,16 @@
 
 .navbar li {
   justify-content: space-evenly;
-  font-weight: 600;
-  /* padding: 10px; */
-  width: 7vw;
+  font-weight: bolder;
+  width: 8vw;
+  font-family: auto;
+  
   margin: 0px 25px 0px 15px;
   list-style: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+ 
 }
 .navbar li:hover{
   color: skyblue;
@@ -167,15 +175,17 @@
     display: auto;
   }
 }
-.navbtn{
+.navbtn {
   text-align: center;
   height: 6vh;
   width: 7vw;
-  font-weight: '600';
-  background-color: #51b751;
+  font-weight: 600;
+  background-color: rgba(255, 176, 4, 0.767); /* Background color with transparency */
   color: white;
-  border: 1px solid lightgray;
-  
+  border: none; /* Remove border to enhance the glass effect */
+  border-radius: 50px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: background-color 0.5s ease; /* Smooth color transition on hover */
 }
 @media(max-width: 1000px){
  
@@ -184,11 +194,16 @@
   }
 }
 .registerbtn{
-  background-color: white;
-  width: 9vw;
+  text-align: center;
+  height: 6vh;
+  width: 7vw;
   font-weight: 600;
-  border : 1px solid gray;
- color: black 
+  background-color: rgba(255, 255, 255, 0.767); /* Background color with transparency */
+  color: white;
+  border: none; /* Remove border to enhance the glass effect */
+  border-radius: 50px;
+  box-shadow: 0 20px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: background-color 0.5s ease; /* Smooth color transition on hover */
 }
 @media(max-width: 1000px){
  
@@ -213,13 +228,14 @@
 .registerbtn:hover{
   background-color: #8fc5ff;
 }
-.navbtn:hover{
-background-color: #8fc5ff;
+.navbtn:hover {
+  background-color: rgba(243, 195, 92, 0.7); /* Darker background on hover */
 }
 
 .loginBody{
+  padding-top : 100px;
   width: 100%;
-  height: 100vh;
+  height: auto;
   /* background-color: red; */
 }
 @media(max-width: 912px){
@@ -268,7 +284,7 @@ background-color: #8fc5ff;
   width: 35vw;
   height: 95vh;
   border: 1px solid lightgray;
-  border-radius: 20px;
+  border-radius: 10px;
   /* background-color: red; */
 }
 
@@ -372,7 +388,7 @@ display: flex;
   font-size: 12px;
   margin-top: 10px;
   border: 1px solid lightgray;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
   margin: auto;
   /* margin-left: 20px; */
@@ -380,11 +396,17 @@ display: flex;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.footer{
+.footer {
+  /* margin-top : 50px; */
   width: 100%;
-  height: 20vw;
-  background: #F2F6F6;
-
+  height: 50vw;
+  background: rgba(194, 250, 211, 0.65); /* Background color with transparency */
+  backdrop-filter: blur(5px); /* Apply a blur effect to create a glass effect */
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow at the top */
+  transition: background-color 0.3s ease; /* Smooth color transition on scroll/hover */
+}
+.footer:hover {
+  background: rgba(179, 255, 202, 0.75); /* Slightly darker background on hover */
 }
 @media(max-width : 768px){
   .footer{
@@ -397,7 +419,7 @@ display: flex;
 }
 @media (min-width: 1000px){
   .footer{
-    height: 45vh;
+    height: auto;
   }
 }
 /* @media(max-width : 912px){
@@ -456,14 +478,14 @@ display: flex;
   }
 } */
 .footerContainer{
-  height: 30vh;
+  height: 85vh;
   display: flex;
   justify-content: space-evenly;
 }
 @media(min-width : 1000px){
  
   .footerContainer{
-    height: 36vh;
+    height: auto;
   }
 }
 @media(max-width : 768px){
@@ -601,6 +623,7 @@ color: black;
   position: relative;
 }
 .main-box-registration{
+  padding-top : 100px;
   justify-content: center;
 }
 .registration-banner img{
@@ -667,21 +690,46 @@ color: black;
 }
 
 .banner-section {
-  background: #F2F6F6;
-  padding:  0 30px;
+  height : 100vh;
+  padding-top: 95px;
+  background: rgba(184, 255, 211, 0.65); /* Background color with transparency */
   position: relative;
   overflow: hidden;
   z-index: 1;
+  backdrop-filter: blur(5px); /* Apply a blur effect to create a glass effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: background-color 0.3s ease; /* Smooth color transition on scroll/hover */
 }
+@media(max-width: 768px){
+  .banner-section {
+    padding-top : 200px
+  }
+  .banner-section h1{
+    font-size : 20px
+  }
+}
+
+@media (max-width: 912px){
+  .banner-section {
+    padding-top : 200px
+  }
+  .banner-section h1{
+    font-size : 20px
+  }
+}
+
+
 .banner-content .header-icon {
     position: absolute;
     right: -30px;
     top: -15px;
 }
+
 [data-aos^=fade][data-aos^=fade].aos-animate {
   opacity: 1;
   transform: translateZ(0);
 }
+
 .banner-content .btn {
   font-weight: 500;
   border-radius: 8px;
@@ -700,11 +748,22 @@ color: black;
 }
 .banner-content h1 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 38px;
   margin-bottom: 25px;
+  font-style : italic;
+  font-family : auto
+}
+
+@media(max-width: 768px){
+ 
+  .banner-content h1{
+    font-size : 30px
+  }
 }
 .banner-content h1 span {
   color: #0E82FD;
+  font-weight: bolder;
+  text-decoration : underline
 }
 .align-items-center {
   align-items: center!important;

@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Link} from 'react-router-dom';
+import HomeLogo from '../../../assets/HomeLogo.jpg'
 import chevrondown from "../../../assets/Icons/chevron-down.svg"
 export default function Sidebar({ isOpen, onClose }) {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      {/* Add your sidebar content here */}
+    <>
+     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <div className='' style={{margin: 'auto'}}>
+    <img className='' src={HomeLogo} alt='Logo' />
+  </div>
       <ul className='sideUl'>
                 <li>
-                  <NavLink activeClassName="active" to= "/">
+                  <Link  to= "/">
                     Home <img src={chevrondown}/>
-                    </NavLink>
-                  </li>
-                <li>
-                  <NavLink activeClassName="active" to= "/">
-
-                     Patients <img src={chevrondown}/>
-                  </NavLink>
-                 
+                    </Link>
                   </li>
                 <li>
                   
-                <NavLink activeClassName="active" to= "/">Doctors <img src={chevrondown}/></NavLink></li>
-                <li>  <NavLink activeClassName="active" to= "/">Pharmacy <img src={chevrondown}/></NavLink></li>
-                <li>  <NavLink activeClassName="active" to= "/">Admin <img src={chevrondown}/></NavLink></li>
+                <Link activeClassName="active" to= "/">Doctors <img src={chevrondown}/></Link></li>
+                <li>  <Link  to= "/">Pharmacy <img src={chevrondown}/></Link></li>
+                <li>  <Link  to= "/">Admin <img src={chevrondown}/></Link></li>
+                <li>  <Link  type = 'button' to= "/UserRegistration">Register<img src={chevrondown}/></Link></li>
+               
+      
             </ul>
       <button onClick={onClose}>Close</button>
     </div>
+    </>
+   
   );
 }

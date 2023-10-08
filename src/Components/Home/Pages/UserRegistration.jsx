@@ -8,6 +8,7 @@ import { useState,useEffect } from 'react';
 import RegistrationModal from '../../RegistrationModal';
 import eye from "../../../assets/Icons/eye.svg"
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import OTPConfirmation from '../../OTPConfirmation';
 export default function UserRegistration() {
   const navigate = useNavigate(); // Initialize useNavigate
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -19,12 +20,14 @@ export default function UserRegistration() {
   const [isClearable, setisClearable] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showOTPConfirmation, setShowOTPConfirmation] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     user: 'Select User',
     firstName: '',
     lastName: '',
+    highestQualification : 'Select Highest Qualification',
     gender: 'Select Gender',
     dateOfBirth: '',
     email: '',
@@ -55,6 +58,7 @@ export default function UserRegistration() {
      document.getElementById("inputUser").style.borderColor = '#dee2e6'
  document.getElementById("inputFirstName").style.borderColor = '#dee2e6'
 document.getElementById("lastName").style.borderColor = '#dee2e6'
+document.getElementById("highestQualification").style.borderColor = '#dee2e6'
  document.getElementById("gender").style.borderColor = '#dee2e6'
  document.getElementById("dateOfBirth").style.borderColor = '#dee2e6'
  document.getElementById("email").style.borderColor = '#dee2e6'
@@ -155,6 +159,10 @@ const handleOnSubmit = async (e)=>{
   scrollToTop();
   document.getElementById("lastName").style.borderColor = 'red'
  }
+ else if (formData.highestQualification === 'Select Highest Qualification'){
+  scrollToTop();
+  document.getElementById("highestQualification").style.borderColor = 'red'
+ }
  else if (formData.gender=== 'Select Gender'){
   scrollToTop();
   document.getElementById("gender").style.borderColor = 'red'
@@ -225,15 +233,18 @@ else if (formData.password !== formData.confirmpassword) {
   
  }
 else {
+
+  setTimeout(() => {
+    setLoading(true);
+
+    // After 2 seconds, show the OTP modal
+    setTimeout(() => {
+      setShowOTPConfirmation(true);
+      setLoading(false); // Stop loading
+    }, 2000);
+  }, 2000);
   localStorage.setItem('formData', JSON.stringify(formData));
-console.log('submitted')
-setLoading(true); // Start loading
-setTimeout(() => {
-  // After 2 seconds, show success message
-  setSuccessMessage('You are successfully registered as a patient...!');
-  setShowModal(true);
-  setLoading(false); // Stop loading
-}, 4000);
+
 }
 
 
@@ -242,6 +253,7 @@ const handleOnReset = ()=>{
   document.getElementById("inputUser").style.borderColor = '#dee2e6'
   document.getElementById("inputFirstName").style.borderColor = '#dee2e6'
  document.getElementById("lastName").style.borderColor = '#dee2e6'
+ document.getElementById("highestQualification").style.borderColor = '#dee2e6'
   document.getElementById("gender").style.borderColor = '#dee2e6'
   document.getElementById("dateOfBirth").style.borderColor = '#dee2e6'
   document.getElementById("email").style.borderColor = '#dee2e6'
@@ -283,6 +295,7 @@ const handleModalClose = () => {
   const savedFormData = JSON.parse(localStorage.getItem('formData'));
 };
 
+
   return (
     <>
     <div className='main-box-registration d-flex'>
@@ -295,7 +308,6 @@ const handleModalClose = () => {
     <label for="inputUser" className="form-label">Register As <span className="requireFields" >*</span></label>
     <select id="inputUser" name="user" value={formData.user} className="form-select" onChange = {handleInputChange} >
       <option selected>Select User</option>
-      <option>Patient</option>
       <option>Doctor</option>
       <option>Staff</option>
     </select>
@@ -303,13 +315,26 @@ const handleModalClose = () => {
          <form className="row g-3 mt-2">
       
   <div className="col-md-12">
-    <label for="inputEmail4" className="form-label">Pateint First Name</label>
-    <input type="name" value= {formData.firstName} className="form-control" name = "firstName" id="inputFirstName" onChange = {handleInputChange}/>
+  <label for="inputEmail4" className="form-label"> Doctor's First Name</label>
+  <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Dr.</span>
+  <input type="text" class="form-control" name="firstName" placeholder="First Name" aria-label="Username" id='inputFirstName' aria-describedby="basic-addon1" onChange={handleInputChange}/>
+</div>
   </div>
   <div className="col-md-12">
-    <label for="inputEmail4" className="form-label">Pateint Last Name</label>
+    <label for="inputEmail4" className="form-label">Doctor's Last Name</label>
     <input type="name" value= {formData.lastName} name = "lastName"  className="form-control" id="lastName" onChange = {handleInputChange}/>
   </div>
+  <div className="col-md-12">
+    <label for="inputState" className="form-label">Highest Qualification</label>
+    <select id="highestQualification" name = "highestQualification"  value = {formData.highestQualification} className="form-select" onChange = {handleInputChange}>
+      <option selected>Select Highest Qualification</option>
+      <option>MBBS</option>
+      <option>MD</option>
+      <option>BDS</option>
+      <option>other</option>
+    </select>
+    </div>
   <div className="col-md-12">
     <label for="inputState" className="form-label">Gender</label>
     <select id="gender" name = "gender"  value = {formData.gender} className="form-select" onChange = {handleInputChange}>
@@ -433,7 +458,9 @@ const handleModalClose = () => {
   
     </div>
  
-
+    {showOTPConfirmation && (
+        <OTPConfirmation />
+      )}
     
     
     {loading && (
@@ -441,7 +468,7 @@ const handleModalClose = () => {
           <div className="blurred-background" />
           <div className="loading-container">
             <img src={LoadinGif} alt="Loading" />
-            <h5>Signing Up</h5>
+            <h5>Please wait...!</h5>
           </div>
         </>
       )}

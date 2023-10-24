@@ -1,12 +1,12 @@
 import React from 'react';
 import Ayaz from '../../../assets/Ayaz.jpg'
 
-export default function Appointments() {
+export default function Appointments(props) {
   return (
    <>
-      <div className="container mt-5 ms-4">
+      <div className={`container mt-5 ${props.isSidebarOpen? 'appointment-sidebarclose' : ''}`}>
       <h5>Patient Appointments</h5>
-      <div className="appointments-container">
+      <div className={`appointments-container ${props.isSidebarOpen? 'appointment-sidebarclose-container' : ''}`}>
         <div className="appointmentbtn">
           <div className='mt-3'>
             <button>Today</button>

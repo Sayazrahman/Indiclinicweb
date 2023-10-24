@@ -73,9 +73,12 @@ body {
 
 }
 .sidebartoggleicon{
-  height: 5vh;
-  width: 10vw;
-  font-size: 4rem;
+  /* height: 5vh; */
+  /* width: 10vw; */
+  font-size: 2rem;
+  color: white;
+  border: none;
+  margin-left: 28px;
 }
 .HomeNavLogo{
  
@@ -130,15 +133,36 @@ body {
   display: flex; 
 justify-content: space-between;
 } 
+
+@media(min-width : 1800px){
+  .navbar{
+    width: 100%;
+  }
+  .static-maincontainer{
+    width : 80vw;
+    margin-left: 50px;
+  }
+  .static-maincontainer .row{
+    width : 100%;
+    justify-content: center;
+    
+  }
+  .static-maincontainer .row .card{
+    width: 25rem;
+    height: 18rem;
+  }
+  .static-maincontainer .row .card h5{
+    font-size: 2rem;
+  }
+}
 @media(max-width: 996px){
   .navbar{
     width : 100vw;
     justify-content: start;
   }
   .navbar .sidebartoggleicon {
-    width: auto;
-    height: 3rem;
-    margin-top: 0px;
+    font-size: 3rem;
+    margin-left: 12px;
   }
 }
 @media(max-width : 330px){
@@ -146,20 +170,29 @@ justify-content: space-between;
     display: none;
   
   }
-  .navbar{
-    height: 14vh;
+  
+  .sidebartoggleicon{
+    font-size: 3rem;
+    margin-left: 12px;
+   
   }
 }
-@media(max-width : 410px){
+@media(max-width : 412px){
   .navbar .HomeNavLogo {
-    width: 15rem;
+    width: 16rem;
   
+  }
+  .sidebartoggleicon{
+    font-size: 3rem;
+    margin-left: 12px;
+   
   }
   
 }
 @media(max-width : 450px){
   .navbar .sidebartoggleicon{
-    width: 13vw;
+   font-size: 3rem;
+   margin-left: 12px;
   }
 }
 .ulWrapper{
@@ -618,6 +651,43 @@ color: black;
   /* padding-top: 150px; */
   z-index: 1000;
 }
+.dashboardsidebar-open {
+  /* width: 80px; */
+  display: none;
+  transition: all 0.9s;
+  left: 0;
+}
+.dashboardNav-expand{
+  margin-left: 0px;
+  transition: all 0.9s;
+  /* background-color: red; */
+}
+.Navcontainer-sidebarclose{
+  width: 100vw;
+  transition: all 0.9s;
+}
+.static.sidebarclose{
+  width : 100vw;
+  transition: all 0.9s;
+}
+.static-row-sidebarclose{
+  display : flex;
+  justify-content : space-between;
+  width : 80vw;
+  transition: all 0.9s;
+}
+.row{
+  display: flex;
+  width: 80vw;
+  justify-content: space-evenly;
+}
+.appointment-sidebarclose{
+  width : 80vw;
+  margin-left: 159px
+}
+.appointment-sidebarclose-container {
+  width : 80vw;
+}
 @media(max-width : 996px){
   .Dashboardsidebar{
     display: none;
@@ -910,21 +980,22 @@ color: black;
 .static-maincontainer{
   display: flex;
   justify-content: space-evenly;
-  height: 30vh;
+  height: auto;
   width: auto;
 padding: 10px;
-  border: 1px solid rgb(245, 245, 245);
+ 
 
 }
 
 
 .card {
   border: none;
-  border-right: 3px solid rgb(245, 245, 245);;
   width: 20rem;
   height: 10rem;
   display: flex;
   border-color: rgb(245, 245, 245);
+  background: rgba(255, 255, 255, 0.2); /* Set the background color with opacity */
+  backdrop-filter: blur(10px); /* Apply a blur effect for a frosted glass look */
 }
 
 .card-body {
@@ -957,8 +1028,9 @@ h6 {
 }
 .appointments-container {
   border: 1px solid lightgray;
+  border-radius : 10px;
   height: 100vh;
-  width: 80%;
+  /* width: 80%; */
   overflow-x: auto;
   
 }
@@ -1045,3 +1117,4 @@ table tr:hover{
     display: none;
   }
 }
+

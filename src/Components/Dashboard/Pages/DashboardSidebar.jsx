@@ -3,11 +3,11 @@ import { NavLink , Link} from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg'
 import chevrondown from "../../../assets/Icons/chevron-down.svg"
 import Ayaz from '../../../assets/Ayaz.jpg'
-export default function DashboardSidebar({ isOpen, onClose }) {
+export default function DashboardSidebar(props) {
   return (
     <>
   
-     <div className= "Dashboardsidebar" >
+     <div className= {`Dashboardsidebar ${props.isSidebarOpen?'dashboardsidebar-open ' : ''}`} >
      <div className='doctorprofilesidebar'>
   <div className='drProfile'>
 <img src={Ayaz}  style={{width : '7vw', height: '15vh', borderRadius : '50px'}}/>

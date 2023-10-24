@@ -6,13 +6,13 @@ import patient from '../../../assets/Icons/Patient Icon.png';
 import patientbed from '../../../assets/Icons/patientbed.png'
 import appointment from '../../../assets/Icons/appointment.png'
 import Appointments from './Appointments';
-export default function Mystatics() {
+export default function Mystatics(props) {
   const percentage = 66;
   return (
     <>
-    <div className="container static-maincontainer col-md-12" >
-      <div className="row col-md-6-d-flex">
-      <div class="card col-md-4">
+    <div className={`static-maincontainer col-md-12 ${props.isSidebarOpen? 'static sidebarclose' : ''}`} >
+      <div className={`row col-md-6-d-flex ${props.isSidebarOpen ? 'static-row-sidebarclose':''}`}>
+      <div class="card col-md-4" style={{ background: '#92ffb05e'}}>
   <div class="card-body mt-3">
   <div className='circular-progress-container'>
 
@@ -28,7 +28,7 @@ export default function Mystatics() {
   </div>
 </div>
 </div>
-<div class="card col-md-4">
+<div class="card col-md-4" style={{background : 'antiquewhite'}}>
   <div class="card-body mt-3" >
   <div className='circular-progress-container'>
 
@@ -44,7 +44,7 @@ export default function Mystatics() {
   </div>
 </div>
 </div>
-<div class="card col-md-4" style={{borderRight: 'none'}}>
+<div class="card col-md-4" style={{borderRight: 'none', background: '#ffffbe'}}>
   <div class="card-body mt-3">
   <div className='circular-progress-container'>
 

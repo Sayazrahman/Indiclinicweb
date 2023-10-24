@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg';
 import LoadinGif from '../../../assets/Icons/1496.gif';
 
-export default function DashboardNavbar() {
+export default function DashboardNavbar(props) {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
  
   const [loading, setLoading] = useState(false);
@@ -18,19 +18,19 @@ export default function DashboardNavbar() {
       navigate('/Indiclinicweb');
     }, 2000);
   };
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsSidebarOpen(!isSidebarOpen);
+  // };
   return (
     <>
       <div className="MainNav">
-        <header className="header header-custom header-fixed header-one header-space" style={{ background: '#060558', zIndex: 1, position: 'fixed' }}>
-          <div className={`Navcontainer dashboardNav ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-            <nav className="navbar navbar-expand-lg navbar">
-              <i className="bi bi-filter-right navbar-toggler sidebartoggleicon  mt-1"  onClick={toggleSidebar}></i>
+        <header className="header header-custom header-fixed header-one header-space" style={{ backgroundImage: 'linear-gradient(160deg, #000e79 0%,  rgb(0 116 103))', zIndex: 1, position: 'fixed' }}>
+          <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
+            <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>
+              <i className="bi bi-filter-right sidebartoggleicon  mt-1"  onClick={props.toggleSidebar}></i>
 
               <div className="logo mt-0 ms-4">
-                <img className="HomeNavLogo mt-4" src={HomeLogo} alt="Logo" />
+                <img className="HomeNavLogo mt-2" src={HomeLogo} alt="Logo" />
               </div>
 
               <div className="mt-1 me-5 dashboardnavdropdown">

@@ -7,7 +7,8 @@ import userregular from '../../../assets/Icons/user-regular.svg'
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import chevron from '../../../assets/Icons/chevron-down.svg'
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar';
+
 
 export default function HomeNavbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -54,6 +55,7 @@ export default function HomeNavbar() {
                 Doctors <img src={chevron} />
               </Link>
             </li>
+  
             <li className='nav-item'>
               <Link
                 activeclassname='active'

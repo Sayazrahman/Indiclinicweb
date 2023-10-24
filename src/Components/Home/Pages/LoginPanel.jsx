@@ -2,12 +2,16 @@ import React from 'react'
 import eye from "../../../assets/Icons/eye.svg"
 import loginPage from "../../../assets/LoginPage.jpg"
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import LoadinGif from '../../../assets/Icons/1496.gif'
 export default function LoginPanel() {
-  
+  const navigate = useNavigate()
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-  
+
+    const [showModal, setShowModal] = useState(false);
+     const [loading, setLoading] = useState(false);
 
   
 
@@ -42,7 +46,11 @@ document.getElementById("emailValidation").style.display = "block";
    }
  
    else{
-    alert("Logged In successfully")
+    setLoading(true);
+    setTimeout(() => {
+      navigate("/MyDashboard")
+    }, 2000);
+   
    }
       }
 
@@ -98,7 +106,15 @@ document.getElementById("emailValidation").style.display = "block";
     </div>
  </section>
 
- 
+ {loading && (
+        <>
+          <div className="blurred-background" />
+          <div className="loading-container">
+            <img src={LoadinGif} alt="Loading" />
+            <h5>Logging you in...!!</h5>
+          </div>
+        </>
+      )}
  
  </>
   )

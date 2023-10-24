@@ -994,8 +994,8 @@ padding: 10px;
   height: 10rem;
   display: flex;
   border-color: rgb(245, 245, 245);
-  background: rgba(255, 255, 255, 0.2); /* Set the background color with opacity */
-  backdrop-filter: blur(10px); /* Apply a blur effect for a frosted glass look */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .card-body {

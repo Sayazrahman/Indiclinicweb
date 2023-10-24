@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Indiclinicweb/static/css/main.b22c2d11.css",
-    "main.js": "/Indiclinicweb/static/js/main.af0513c5.js",
+    "main.css": "/Indiclinicweb/static/css/main.08a4ae56.css",
+    "main.js": "/Indiclinicweb/static/js/main.97a1ce90.js",
     "static/js/787.ab0d53d4.chunk.js": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js",
     "static/media/doctor-banner.png": "/Indiclinicweb/static/media/doctor-banner.b5c05e05c35b2bf2820c.png",
     "static/media/LoginPage.jpg": "/Indiclinicweb/static/media/LoginPage.91028f958907abeda2eb.jpg",
@@ -17,12 +17,12 @@
     "static/media/lock-solid.svg": "/Indiclinicweb/static/media/lock-solid.e87aad8fe7fe0fa31647cec2cc852ba9.svg",
     "static/media/arrow-counterclockwise.svg": "/Indiclinicweb/static/media/arrow-counterclockwise.48745dc8e6d9b1a2f8ec987bc9867fdf.svg",
     "static/media/chevron-down.svg": "/Indiclinicweb/static/media/chevron-down.8624f04faf16b2d07c00235d9dc68ae2.svg",
-    "main.b22c2d11.css.map": "/Indiclinicweb/static/css/main.b22c2d11.css.map",
-    "main.af0513c5.js.map": "/Indiclinicweb/static/js/main.af0513c5.js.map",
+    "main.08a4ae56.css.map": "/Indiclinicweb/static/css/main.08a4ae56.css.map",
+    "main.97a1ce90.js.map": "/Indiclinicweb/static/js/main.97a1ce90.js.map",
     "787.ab0d53d4.chunk.js.map": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b22c2d11.css",
-    "static/js/main.af0513c5.js"
+    "static/css/main.08a4ae56.css",
+    "static/js/main.97a1ce90.js"
   ]
 }

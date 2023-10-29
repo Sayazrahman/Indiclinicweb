@@ -5,12 +5,13 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
 .header {
   position: fixed;
   display: block;
   width: 100%;
   z-index: 9999;
-  background: rgba(202, 247, 255, 0.788); /* Background color with transparency */
+  background: rgb(255 175 127);/* Background color with transparency */
   backdrop-filter: blur(5px); /* Apply a blur effect to create a glass effect */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border at the bottom */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
@@ -114,9 +115,87 @@ body {
   align-items: center;
 }
 @media(max-width: 1000px){
+  .responsiveTable{
+    width : 100vw
+  }
   .navbarUl{
     display: none;
   }
+  .static-maincontainer .row .card{
+    width: 20rem;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    
+  }
+  .static-maincontainer .row {
+    justify-content: normal;
+  }
+}
+@media(max-width: 838px){
+  .responsiveTable{
+    width : 100vw
+  }
+.static-maincontainer{
+  width: 100vw;
+}
+  .static-maincontainer .row .card{
+    width: 18rem;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    
+  }
+  .static-maincontainer .row {
+    justify-content: normal;
+    width: 100vw;
+  }
+}
+@media(max-width: 792px){
+  .table .striped tr td {
+    display: flex;
+  }
+  .table .striped tr td {
+    display: flex;
+  }
+  .table img {
+    width: auto;
+  }
+  .responsiveTable{
+    width : 100vw
+  }
+  .static-maincontainer{
+    width: 100vw;
+  }
+  .static-maincontainer .row .card{
+    width: 20rem;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+    
+  }
+  .static-maincontainer .row {
+    justify-content: normal;
+    width: 100vw;
+  }
+}
+
+@media(min-width: 1000px){
+  .static-maincontainer .row {
+    justify-content: normal;
+  }
+  .static-maincontainer .row .card{
+    width: auto;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+ 
+  .static-maincontainer .row .card .card-body .circular-progress-container{
+   width: 5rem;
+  }
+ 
+
 }
 
 .navbar{
@@ -148,11 +227,20 @@ justify-content: space-between;
     
   }
   .static-maincontainer .row .card{
-    width: 25rem;
+    width: 40rem;
     height: 18rem;
   }
   .static-maincontainer .row .card h5{
-    font-size: 2rem;
+    font-size: 42px;
+  }
+  .static-maincontainer .row .card h6{
+    font-size: 28px;
+  }
+  .static-maincontainer .row .card .card-body .circular-progress-container{
+    width: 13rem;
+  }
+  .static-maincontainer .row .card .card-body .circular-progress-container img{
+    width: 5rem;
   }
 }
 @media(max-width: 996px){
@@ -678,8 +766,10 @@ color: black;
 }
 .row{
   display: flex;
-  width: 80vw;
   justify-content: space-evenly;
+}
+.staticrow{
+width: 80vw
 }
 .appointment-sidebarclose{
   width : 80vw;
@@ -948,7 +1038,7 @@ color: black;
 };
 
 .nav-link {
-  color: black;
+  color: white;
 }
 /* Doctor Dashboard CSS */
 .dash-card .dash-widget .circle-bar{
@@ -983,6 +1073,7 @@ color: black;
   height: auto;
   width: auto;
 padding: 10px;
+width: 90vw;
  
 
 }
@@ -1005,8 +1096,8 @@ padding: 10px;
 }
 
 .circular-progress-container {
-  width: 7vw;
-  height: 7vh;
+  width: 6rem;
+  height: 6rem;
 }
 
 .circular-progress-image {
@@ -1117,4 +1208,5 @@ table tr:hover{
     display: none;
   }
 }
+
 

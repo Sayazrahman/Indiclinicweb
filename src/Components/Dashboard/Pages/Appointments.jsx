@@ -4,7 +4,7 @@ import Ayaz from '../../../assets/Ayaz.jpg'
 export default function Appointments(props) {
   return (
    <>
-      <div className={`container mt-5 ${props.isSidebarOpen? 'appointment-sidebarclose' : ''}`}>
+      <div className={`container mt-5 responsiveTable ${props.isSidebarOpen? 'appointment-sidebarclose' : ''}`}>
       <h5>Patient Appointments</h5>
       <div className={`appointments-container ${props.isSidebarOpen? 'appointment-sidebarclose-container' : ''}`}>
         <div className="appointmentbtn">
@@ -18,17 +18,19 @@ export default function Appointments(props) {
         <table className='striped'>
   <thead>
    
-      <th>Patient Name</th>
-      <th>Appointment Date</th>
-      <th>Purpose</th>
-      <th>Patient Type</th>
-      <th>Paid Amount</th>
-      <th>Action</th>
+      <th scope="col"> Patient Name</th>
+      <th scope="col">Appointment Date</th>
+      <th scope="col">Purpose</th>
+      <th scope="col">Patient Type</th>
+      <th scope="col">Paid Amount</th>
+      <th scope="col">Action</th>
    
   </thead>
   <tbody>
     <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
+      <td>
+        <img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}}  className='me-1' ></img><span > S Ayaz Rahman</span></td>
+      
       <td>
         22 Oct 2023<br />
         <span style={{ color: '#20c0f3' }}>10 AM</span>

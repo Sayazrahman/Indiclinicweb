@@ -11,7 +11,7 @@ export default function Mystatics(props) {
   return (
     <>
     <div className={`static-maincontainer col-md-12 ${props.isSidebarOpen? 'static sidebarclose' : ''}`} >
-      <div className={`row col-md-6-d-flex ${props.isSidebarOpen ? 'static-row-sidebarclose':''}`}>
+      <div className={`row staticrow col-md-6-d-flex ${props.isSidebarOpen ? 'static-row-sidebarclose':''}`}>
       <div class="card col-md-4" style={{ background: '#92ffb05e'}}>
   <div class="card-body mt-3">
   <div className='circular-progress-container'>

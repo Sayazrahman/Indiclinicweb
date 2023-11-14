@@ -15,7 +15,9 @@ export default function LayoutMyDashboard() {
   
        <DashboardNavbar toggleSidebar= {toggleSidebar} isSidebarOpen={isSidebarOpen} />
    <div style={{ display: 'flex'}}>
-   <DashboardSidebar isSidebarOpen={isSidebarOpen}/>
+    <div style={{width : "auto"}}>
+    <DashboardSidebar isSidebarOpen={isSidebarOpen}/>
+    </div>
    <MyDashboard isSidebarOpen={isSidebarOpen}/>
    </div>
 

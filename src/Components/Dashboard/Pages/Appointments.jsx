@@ -8,7 +8,7 @@ export default function Appointments(props) {
       <h5>Patient Appointments</h5>
       <div className={`appointments-container ${props.isSidebarOpen? 'appointment-sidebarclose-container' : ''}`}>
         <div className="appointmentbtn">
-          <div className='mt-3'>
+          <div>
             <button>Today</button>
             <button className='mx-2'>Tomorrow</button>
             <button>View All</button>
@@ -28,8 +28,69 @@ export default function Appointments(props) {
   </thead>
   <tbody>
     <tr className='striped'>
+      <div  className= "d-flex">
+      <td> <img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}}  className='me-1' ></img><span > S Ayaz Rahman</span></td>
+      </div>
       <td>
-        <img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}}  className='me-1' ></img><span > S Ayaz Rahman</span></td>
+        22 Oct 2023<br />
+        <span style={{ color: '#20c0f3' }}>10 AM</span>
+      </td>
+      <td>General</td>
+      <td>Old</td>
+      <td>Rs 500</td>
+      <td>
+        <div className="action-buttons-container">
+          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
+            <i className="bi bi-check-lg me-1"></i>
+          </button>
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr className='striped'>
+      <div className= "d-flex">
+      <td><img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
+      </div>
+     
+      <td>
+        22 Oct 2023<br />
+        <span style={{ color: '#20c0f3' }}>10 AM</span>
+      </td>
+      <td>General</td>
+      <td>Old</td>
+      <td>Rs 500</td>
+      <td>
+        <div className="action-buttons-container">
+          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
+            <i className="bi bi-check-lg me-1"></i>
+          </button>
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+
+ 
+  
+  
+  <tbody>
+    <tr className='striped'>
+      <div className= "d-flex">
+      <td><img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
+      </div>
       
       <td>
         22 Oct 2023<br />
@@ -40,214 +101,14 @@ export default function Appointments(props) {
       <td>Rs 500</td>
       <td>
         <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
+          <button  style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i title="view" className="bi bi-eye me-1"></i>
           </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
+          <button  className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
+            <i title="accept" className="bi bi-check-lg me-1"></i>
           </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr className='striped'>
-      <td><img src={Ayaz} style={{width: '3vw', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      <td>
-        22 Oct 2023<br />
-        <span style={{ color: '#20c0f3' }}>10 AM</span>
-      </td>
-      <td>General</td>
-      <td>Old</td>
-      <td>Rs 500</td>
-      <td>
-        <div className="action-buttons-container">
-          <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>View
-          </button>
-          <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>Accept
-          </button>
-          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>Cancel
+          <button  style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i title="cancel" className="bi bi-x me-1"></i>
           </button>
         </div>
       </td>

@@ -24,7 +24,7 @@ export default function DashboardNavbar(props) {
   return (
     <>
       <div className="MainNav">
-        <header className="header header-custom header-fixed header-one header-space" style={{ backgroundImage: 'linear-gradient(160deg, #000e79 0%,  rgb(0 116 103))', zIndex: 1, position: 'fixed' }}>
+        <header className="header header-custom header-fixed header-one header-space" style={{ backgroundImage: 'linear-gradient(160deg, rgb(0 0 0) 0%, rgb(16 119 151))', zIndex: 1, position: 'fixed' }}>
           <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
             <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>
               <i className="bi bi-filter-right sidebartoggleicon  mt-1"  onClick={props.toggleSidebar}></i>
@@ -37,12 +37,12 @@ export default function DashboardNavbar(props) {
                 <div className="dropdown">
                   <button
                     className="btn btn doctorprofilebtn dropdown-toggle"
-                    style={{ borderRadius: '50px' }}
+                    style={{ borderRadius: '5x' }}
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <i className="bi bi-person-fill"></i> Dr.S Ayaz Rahman
+                    <i className="bi bi-person-fill"></i> Dr.Maroof Jilani
                   </button>
                   <ul className="dropdown-menu">
                     <li>Profile Settings</li>

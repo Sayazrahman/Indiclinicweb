@@ -31,28 +31,50 @@ export default function LoginPanel() {
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
       
     
-      const handleLoginAsPateint=()=>{
-   if(email.trim()=== "" || undefined){
-document.getElementById("emailValidation").innerHTML = "Please Enter Email or Phone No."
-document.getElementById("emailValidation").style.display = "block";
-   }
-   else if (!emailRegex.test(email)){
-    document.getElementById("emailValidation").innerHTML = "Please  Enter Valid Email or Phone No."
-document.getElementById("emailValidation").style.display = "block";
-   }
-   else if (password.trim()=== "" || undefined){
-    document.getElementById("passwordValidation").innerHTML = "Please Enter Password"
-    document.getElementById("passwordValidation").style.display = "block";
-   }
- 
-   else{
-    setLoading(true);
-    setTimeout(() => {
-      navigate("/MyDashboard")
-    }, 2000);
-   
-   }
-      }
+      const handleLogin = () => {
+        // Get the stored form data from session storage
+        const storedFormDataString = window.sessionStorage.getItem('RegistrationData');
+        if (!storedFormDataString) {
+          // No stored data, handle this case as needed
+          console.error("No stored form data found");
+          return;
+        }
+      
+        const storedFormData = JSON.parse(storedFormDataString);
+      
+        // Get the email and password entered by the user
+        const enteredEmail = email.trim();
+        const enteredPassword = password.trim();
+      
+        if (enteredEmail === "" || enteredEmail === undefined) {
+          document.getElementById("emailValidation").innerHTML = "Please Enter Email or Phone No.";
+          document.getElementById("emailValidation").style.display = "block";
+        } else if (!emailRegex.test(enteredEmail)) {
+          document.getElementById("emailValidation").innerHTML = "Please Enter Valid Email or Phone No.";
+          document.getElementById("emailValidation").style.display = "block";
+        } else if (enteredPassword === "" || enteredPassword === undefined) {
+          document.getElementById("passwordValidation").innerHTML = "Please Enter Password";
+          document.getElementById("passwordValidation").style.display = "block";
+        } else {
+          // Check if entered email and password match stored data
+          if (
+            enteredEmail === storedFormData.email &&
+            enteredPassword === storedFormData.password
+          ) {
+            setLoading(true);
+            setTimeout(() => {
+              // Redirect to the dashboard after a delay
+              navigate("/MyDashboard");
+            }, 2000);
+          } else {
+            // Display a validation message for incorrect email or password
+            alert("Invalid email or password.");
+            
+     
+          }
+        }
+      };
+      
 
       const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -93,7 +115,7 @@ document.getElementById("emailValidation").style.display = "block";
     </div>
     <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
     <div style={{margin: 'auto',textAlign: 'center'}}>
-         <button className='btn btn-sucess mainLoginbutton'  onClick={handleLoginAsPateint}>Login</button>
+         <button className='btn btn-sucess mainLoginbutton'  onClick={handleLogin}>Login</button>
 <hr/>
 <button className='btn btn OtpmainBtn'>Login through OTP</button>  
     </div>

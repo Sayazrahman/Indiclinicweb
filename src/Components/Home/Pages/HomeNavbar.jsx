@@ -43,7 +43,7 @@ export default function HomeNavbar() {
                 to='/Indiclinicweb'
               >
                 
-               Home  <img src={chevron} />
+                <i class="bi bi-house"></i>  Home
               </Link>
             </li>
             <li className='nav-item'>
@@ -52,7 +52,7 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/doctors'
               >
-                Doctors <img src={chevron} />
+               <i class="bi bi-person-add"></i> Doctors
               </Link>
             </li>
   
@@ -62,16 +62,16 @@ export default function HomeNavbar() {
                 className='nav-link'
                 to='/pharmacy'
               >
-                Pharmacy <img src={chevron} />
+               <i class="bi bi-capsule"></i> Pharmacy
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 activeclassname='active'
                 className='nav-link'
-                to='/admin'
+                to='/Admin'
               >
-                Admin <img src={chevron} />
+              <i class="bi bi-person-workspace"></i>  Admin 
               </Link>
             </li>
           </ul>

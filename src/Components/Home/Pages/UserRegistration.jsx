@@ -28,6 +28,7 @@ export default function UserRegistration() {
     firstName: '',
     lastName: '',
     highestQualification : 'Select Highest Qualification',
+    Speciality : 'Select Speciality',
     gender: 'Select Gender',
     dateOfBirth: '',
     email: '',
@@ -59,6 +60,7 @@ export default function UserRegistration() {
  document.getElementById("inputFirstName").style.borderColor = '#dee2e6'
 document.getElementById("lastName").style.borderColor = '#dee2e6'
 document.getElementById("highestQualification").style.borderColor = '#dee2e6'
+document.getElementById("Speciality").style.borderColor = '#dee2e6'
  document.getElementById("gender").style.borderColor = '#dee2e6'
  document.getElementById("dateOfBirth").style.borderColor = '#dee2e6'
  document.getElementById("email").style.borderColor = '#dee2e6'
@@ -163,6 +165,10 @@ const handleOnSubmit = async (e)=>{
   scrollToTop();
   document.getElementById("highestQualification").style.borderColor = 'red'
  }
+ else if (formData.Speciality === 'Select Speciality'){
+  scrollToTop();
+  document.getElementById("Speciality").style.borderColor = 'red'
+ }
  else if (formData.gender=== 'Select Gender'){
   scrollToTop();
   document.getElementById("gender").style.borderColor = 'red'
@@ -243,7 +249,7 @@ else {
       setLoading(false); // Stop loading
     }, 2000);
   }, 2000);
-  localStorage.setItem('formData', JSON.stringify(formData));
+  window.sessionStorage.setItem('RegistrationData', JSON.stringify(formData));
 
 }
 
@@ -325,6 +331,16 @@ const handleModalClose = () => {
     <label for="inputEmail4" className="form-label">Doctor's Last Name</label>
     <input type="name" value= {formData.lastName} name = "lastName"  className="form-control" id="lastName" onChange = {handleInputChange}/>
   </div>
+  <div className="col-md-12">
+    <label for="inputState" className="form-label">Speciality</label>
+    <select id="Speciality" name = "Speciality"  value = {formData.Speciality} className="form-select" onChange = {handleInputChange}>
+      <option selected>Select Speciality</option>
+      <option>Paeditrics</option>
+      <option>Surgeon</option>
+      <option>Dentist</option>
+      <option>Opthalmologist</option>
+    </select>
+    </div>
   <div className="col-md-12">
     <label for="inputState" className="form-label">Highest Qualification</label>
     <select id="highestQualification" name = "highestQualification"  value = {formData.highestQualification} className="form-select" onChange = {handleInputChange}>

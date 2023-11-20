@@ -13,24 +13,24 @@ export default function Footer() {
         <div className='mt-4'>
         <h4 className='ms-4' style={{textAlign: 'center'}}>For Patients</h4>
         <ul>
-            <li>Search for Doctors</li>
-            <li>Login</li>
-            <li>Register</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i>Search for Doctors</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> Login</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> Register</li>
         </ul>
         </div>
         <div  className='mt-4 '>
         <h4 className='ms-4' style={{textAlign: 'center'}}>For Doctors</h4>
         <ul>
-            <li>Appointments</li>
-            <li>Chat</li>
-            <li>Login</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> Appointments</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> Chat</li>
+            <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> Login</li>
             </ul>
             </div>
             <div  className='mt-4 me-5'  >
-                <h4 > Contact Us</h4>
-                <li>sarfarazganj, Lucknow</li>
-                <li>7979847221</li>
-                <li>rahmansyedayaz@gmail.com</li>
+                <h4>Contact Us</h4>
+                <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> sarfarazganj, Lucknow</li>
+                <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> 7979847221</li>
+                <li><i class="bi bi-chevron-double-right" style={{fontSize: '12px'}}></i> rahmansyedayaz@gmail.com</li>
                 </div>
     </div>
     <hr/>

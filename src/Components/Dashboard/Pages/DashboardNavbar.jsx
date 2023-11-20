@@ -23,7 +23,7 @@ export default function DashboardNavbar(props) {
   // };
   return (
     <>
-      <div className="MainNav">
+      <div className="MainNav" >
         <header className="header header-custom header-fixed header-one header-space" style={{ backgroundImage: 'linear-gradient(160deg, rgb(0 0 0) 0%, rgb(16 119 151))', zIndex: 1, position: 'fixed' }}>
           <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
             <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>

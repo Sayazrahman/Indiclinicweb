@@ -3,6 +3,8 @@ import { NavLink , Link} from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg'
 import chevrondown from "../../../assets/Icons/chevron-down.svg"
 import Ayaz from '../../../assets/Ayaz.jpg'
+
+
 export default function DashboardSidebar(props) {
   return (
     <>
@@ -22,7 +24,7 @@ export default function DashboardSidebar(props) {
                 <li className='nav-item'> <Link  to= "/MyDashboard"className='active'> <i class="bi bi-heart-pulse-fill"></i><span className='ms-2'>My Patients</span></Link></li>
                 <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-hourglass-bottom"></i><span className='ms-2'>Schedule Timing</span></Link></li>
                 <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-alarm-fill"></i><span className='ms-2'>Available Timings</span></Link></li>
-                <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-people-fill"></i><span className='ms-2'>Manage Staffs</span></Link></li>
+                <li className='nav-item'>  <Link  to= "/ManageStaffs" className='active'><i class="bi bi-people-fill"></i><span className='ms-2'>Manage Staffs</span></Link></li>
                 <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-receipt"></i><span className='ms-2'>Invoices</span></Link></li>
                 <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-cash-coin"></i><span className='ms-2'>Accounts</span></Link></li>
                 <li className='nav-item'>  <Link  to= "/MyDashboard" className='active'><i class="bi bi-star-fill"></i><span className='ms-2'>Reviews</span></Link></li>

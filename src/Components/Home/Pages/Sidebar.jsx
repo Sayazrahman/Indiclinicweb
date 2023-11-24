@@ -2,30 +2,44 @@ import React, { useState } from 'react';
 import { NavLink , Link} from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg'
 import chevrondown from "../../../assets/Icons/chevron-down.svg"
+import LoginLogo from '../../../assets/Icons/lock-solid.svg'
+import userregular from '../../../assets/Icons/user-regular.svg'
 export default function Sidebar({ isOpen, onClose }) {
+  const body = document.querySelector('body');
+  
+  const handleSidebarToggle = () => {
+    if (isOpen) {
+      body.classList.remove('sidebar-open');
+      document.getElementById("root").style.overflow = "hidden"
+    } else {
+      body.classList.add('sidebar-open');
+    }
+    onClose();
+  };
   return (
     <>
      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-    <div className='' style={{margin: 'auto'}}>
-    <img className='' src={HomeLogo} alt='Logo' />
-  </div>
+ 
       <ul className='sideUl'>
                 <li>
-                  <Link  to= "/">
-                    Home <img src={chevrondown}/>
+                  <Link  to= "/Indiclinicweb">
+                  <i class="bi bi-house"></i> Home
+                  <i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i>
                     </Link>
                   </li>
                 <li>
                   
-                <Link activeClassName="active" to= "/">Doctors <img src={chevrondown}/></Link></li>
-                <li>  <Link  to= "/">Pharmacy <img src={chevrondown}/></Link></li>
-                <li>  <Link  to= "/">Admin <img src={chevrondown}/></Link></li>
-                <li>  <Link  type = 'button' to= "/UserRegistration">Register<img src={chevrondown}/></Link></li>
+                <Link activeClassName="active" to= "/Indiclinic"><i class="bi bi-person-add"></i> Doctors <i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i></Link></li>
+                <li>  <Link  to= "/"><i class="bi bi-capsule"></i> Pharmacy <i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i></Link></li>
+                <li>  <Link  to= "/"><i class="bi bi-person-workspace"></i> Admin <i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i></Link></li>
+                <li>  <Link  type = 'button' to= "/UserRegistration"><i class="bi bi-person"></i> Register<i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i></Link></li>
+                <li>  <Link  type = 'button' to= "/Login"><i class="bi bi-box-arrow-in-right"></i> Login<i class="bi bi-chevron-double-right" style={{fontSize: '15px',fontWeight : 'bolder'}}></i></Link></li>
                
       
             </ul>
-      <button onClick={onClose}>Close</button>
+      <button onClick={handleSidebarToggle}>Close</button>
     </div>
+    {isOpen && <div className="overlay" onClick={handleSidebarToggle}></div>}
     </>
    
   );

@@ -9,7 +9,7 @@ import Banner3 from '../../../assets/banner-img3.png'
 export default function HomePage() {
   return (
     <>
-    <section class="banner-section">
+    <section class="banner-section pb-2 mb-5">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-6">

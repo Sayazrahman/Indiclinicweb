@@ -22,13 +22,9 @@ export default function HomeNavbar() {
   <header className='header header-custom header-fixed header-one header-space'>
     <div className='container Navcontainer'>
       <nav className='navbar navbar-expand-lg navbar '>
-        <button
-          className='navbar-toggler'
-          type='button'
-          onClick={toggleSidebar}
-        >
-          <span className='navbar-toggler-icon'></span>
-        </button>
+    
+          <span className= "sidebarOpenmenuAlign" onClick={toggleSidebar}><i class="bi bi-list" style={{fontSize: '35px' , color : 'white'}}></i></span>
+      
 
         <div className='logo mt-0' style={{margin: 'auto'}}>
           <img className='HomeNavLogo mt-4' src={HomeLogo} alt='Logo' />
@@ -87,7 +83,7 @@ export default function HomeNavbar() {
               style={{width: '1vw', height : '1vw'}}
             />
             
-            <Link className='nav-item' to= "/UserRegistration">Signup</Link>
+            <Link className='nav-item' to= "/UserRegistration">Signup</Link> 
           </button>
           <button className='btn btn-success navbtn mt-1'> <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
         </div>

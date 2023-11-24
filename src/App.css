@@ -1,4 +1,6 @@
-
+.sidebarOpenmenuAlign{
+  margin-right: 30px
+}
 
 
 body {
@@ -70,6 +72,9 @@ body {
 }
 .sidebar-open ul{
   display: none;
+}
+.sidebar-open .HomeNavLogo{
+  margin-left : 35px
 }
 
 
@@ -274,6 +279,10 @@ justify-content: space-between;
     width : 100vw;
     justify-content: start;
   }
+  .sidebarOpenmenuAlign{
+    margin-right: 0px
+  }
+  
   .navbar .sidebartoggleicon {
     font-size: 3rem;
     margin-left: 12px;
@@ -293,8 +302,12 @@ justify-content: space-between;
 }
 @media(max-width : 412px){
   .navbar .HomeNavLogo {
-    width: 16rem;
+    width: 14rem;
   
+  }
+  .sidebar-open .HomeNavLogo{
+    margin-left : 0px;
+    display : none
   }
   .sidebartoggleicon{
     font-size: 3rem;
@@ -626,18 +639,19 @@ display: flex;
 }
 @media(max-width : 768px){
   .aboutSection{
+    margin-top: 15px;
     width : fit-content;
   }
   .aboutSection img {
-    width : 100%;
+    display : none
   }
   .aboutSection .info {
     width : fit-content;
     font-size : 10px
   }
   .aboutSection p {
- 
-    font-size : 10px
+ color : white;
+    font-size : 12px
   }
 }
 /* @media(max-width : 912px){
@@ -739,10 +753,10 @@ color: black;
   position: fixed;
   top: 0;
   left: -250px;
-  background-color: #00028d;
+  background-color: #030b43;
   overflow-x: hidden;
   transition: 0.3s;
-  padding-top: 60px;
+
   z-index: 1000;
 }
 .dashboardNav{
@@ -889,11 +903,31 @@ width: 80vw
 }
 
 .sidebar li {
-  padding: 30px;
-  background-color: white;
+  border-bottom: 1px solid white;
+  padding: 30px 15px;
+  background-color: #030b43;
   color: #fff;
-  border: 1px solid #979797;
-    font-size: 18px;
+  font-size: 20px;
+}
+.sidebar li a {
+
+  color : white;
+  font-family: auto;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Make sure it's above the sidebar */
+}
+
+/* Apply styles to the body when the sidebar is open */
+body.sidebar-open {
+  overflow: hidden;
+  filter: blur(3px); /* You can adjust the blur effect */
 }
 
 .sidebar button {
@@ -1002,7 +1036,7 @@ width: 80vw
 }
 
 .banner-section {
-  height : 100vh;
+  height :auto;
   padding-top: 95px;
   background: rgb(255, 255, 255); /* Background color with transparency */
   position: relative;
@@ -1028,6 +1062,9 @@ width: 80vw
   .banner-section h1{
     font-size : 20px
   }
+  /* .banner-section{
+    height : 90vh
+  } */
 }
 
 

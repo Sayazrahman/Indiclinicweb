@@ -5,6 +5,8 @@ import pharmacist from '../../../assets/Icons/pharmacist.png';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { Button, Modal, Form ,Alert  } from 'react-bootstrap';
+
+
 export default function ManageStaffs() {
 
     const [showModal, setShowModal] = useState(false);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Ayaz from '../../../assets/Ayaz.jpg'
 import { useNavigate } from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg';
 import LoadinGif from '../../../assets/Icons/1496.gif';
@@ -24,7 +25,7 @@ export default function DashboardNavbar(props) {
   return (
     <>
       <div className="MainNav" >
-        <header className="header header-custom header-fixed header-one header-space" style={{ backgroundImage: 'linear-gradient(160deg, rgb(0 0 0) 0%, rgb(16 119 151))', zIndex: 1, position: 'fixed' }}>
+        <header className="header header-custom header-fixed header-one header-space" style={{  background: "rgb(9 0 81)", zIndex: 1, position: 'fixed' }}>
           <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
             <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>
               <i className="bi bi-filter-right sidebartoggleicon  mt-1"  onClick={props.toggleSidebar}></i>
@@ -33,16 +34,17 @@ export default function DashboardNavbar(props) {
                 <img className="HomeNavLogo mt-2" src={HomeLogo} alt="Logo" />
               </div>
 
-              <div className="mt-1 me-5 dashboardnavdropdown">
+              <div className="mt-1 me-2 dashboardnavdropdown">
                 <div className="dropdown">
                   <button
-                    className="btn btn doctorprofilebtn dropdown-toggle"
-                    style={{ borderRadius: '5x' }}
+                    className=" doctorprofilebtn dropdown-toggle"
+               
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <i className="bi bi-person-fill"></i> Dr.Maroof Jilani
+                    <span></span>
+                    <img src={Ayaz} style={{width: '2rem', height: '2rem' , borderRadius: '50%'}} /> Dr.Maroof Jilani
                   </button>
                   <ul className="dropdown-menu">
                     <li>Profile Settings</li>

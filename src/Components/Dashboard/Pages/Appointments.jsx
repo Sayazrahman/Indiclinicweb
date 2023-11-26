@@ -8,7 +8,7 @@ export default function Appointments(props) {
       <h5>Patient Appointments</h5>
       <div className={`appointments-container ${props.isSidebarOpen? 'appointment-sidebarclose-container' : ''}`}>
         <div className="appointmentbtn">
-          <div>
+          <div className='d-flex'>
             <button>Today</button>
             <button className='mx-2'>Tomorrow</button>
             <button>View All</button>

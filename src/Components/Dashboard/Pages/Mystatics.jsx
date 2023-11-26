@@ -16,7 +16,7 @@ export default function Mystatics(props) {
     <>
     <div className={`static-maincontainer col-md-12 ${props.isSidebarOpen? 'static sidebarclose' : ''}`} >
       <div className={`row staticrow col-md-6-d-flex ${props.isSidebarOpen ? 'static-row-sidebarclose':''}`}>
-      <div class="card col-md-4" style={{ background: "rgb(207 255 220 / 37%)"}}>
+      <div class="card">
   <div class="card-body mt-3">
   <div className='circular-progress-container'>
 
@@ -32,7 +32,7 @@ export default function Mystatics(props) {
   </div>
 </div>
 </div>
-<div class="card col-md-4" style={{background : 'rgb(255 248 248)'}}>
+<div class="card">
   <div class="card-body mt-3" >
   <div className='circular-progress-container'>
 
@@ -48,7 +48,7 @@ export default function Mystatics(props) {
   </div>
 </div>
 </div>
-<div class="card col-md-4" style={{borderRight: 'none', background: 'rgb(255 245 222)'}}>
+<div class="card" style={{borderRight: 'none',}}>
   <div class="card-body mt-3">
   <div className='circular-progress-container'>
 

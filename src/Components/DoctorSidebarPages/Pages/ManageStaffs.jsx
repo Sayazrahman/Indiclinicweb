@@ -38,7 +38,7 @@ export default function ManageStaffs() {
         // Close the modal after some delay (simulating an asynchronous operation)
         setTimeout(() => {
           handleClose();
-          // Reset the state for the next use
+          
           setToken('');
           setShowAlert(false);
           setStaffName('');

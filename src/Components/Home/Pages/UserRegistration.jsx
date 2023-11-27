@@ -483,7 +483,7 @@ const handleModalClose = () => {
         <>
           <div className="blurred-background" />
           <div className="loading-container">
-            <img src={LoadinGif} alt="Loading" />
+            <img src={LoadinGif} alt="Loading" style={{width: '40px', height: '40px'}} />
             <h5>Please wait...!</h5>
           </div>
         </>

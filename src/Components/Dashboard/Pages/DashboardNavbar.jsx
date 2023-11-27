@@ -28,7 +28,7 @@ export default function DashboardNavbar(props) {
         <header className="header header-custom header-fixed header-one header-space" style={{  background: "rgb(9 0 81)", zIndex: 1, position: 'fixed' }}>
           <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
             <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>
-              <i className="bi bi-filter-right sidebartoggleicon  mt-1"  onClick={props.toggleSidebar}></i>
+              <i className="bi bi-filter-right sidebartoggleicon  mt-1" style={{fontSize: '30px'}} onClick={props.toggleSidebar}></i>
 
               <div className="logo mt-0 ms-4">
                 <img className="HomeNavLogo mt-2" src={HomeLogo} alt="Logo" />
@@ -60,7 +60,7 @@ export default function DashboardNavbar(props) {
         <div className="loading-overlay">
           <div className="blurred-background" />
           <div className="loading-container">
-            <img src={LoadinGif} alt="Loading" />
+            <img src={LoadinGif} alt="Loading"  style={{width: '40px', height: '40px'}}/>
             <h5>Logging Out..!</h5>
           </div>
         </div>

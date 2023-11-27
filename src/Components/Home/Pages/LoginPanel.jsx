@@ -63,11 +63,11 @@ export default function LoginPanel() {
           ) {
             setLoading(true);
             setTimeout(() => {
-              // Redirect to the dashboard after a delay
+              
               navigate("/MyDashboard");
-            }, 2000);
+            }, 5000);
           } else {
-            // Display a validation message for incorrect email or password
+          
             alert("Invalid email or password.");
             
      
@@ -132,7 +132,7 @@ export default function LoginPanel() {
         <>
           <div className="blurred-background" />
           <div className="loading-container">
-            <img src={LoadinGif} alt="Loading" />
+            <img src={LoadinGif} alt="Loading" style={{width: '40px', height: '40px'}} />
             <h5>Logging you in...!!</h5>
           </div>
         </>

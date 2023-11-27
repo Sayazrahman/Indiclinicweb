@@ -1714,3 +1714,15 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-menu.show {
   inset: 50px auto auto -100px;
 }
+
+.dashboard-sidebar-submenu{
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid #f1f1f1;
+    font-size: 18px;
+    margin-left: -31px;
+}
+.submenu{
+  background-color: #8fc5ff;
+}

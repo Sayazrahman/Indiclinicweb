@@ -63,11 +63,11 @@ export default function LoginPanel() {
           ) {
             setLoading(true);
             setTimeout(() => {
-              // Redirect to the dashboard after a delay
+              
               navigate("/MyDashboard");
             }, 5000);
           } else {
-            // Display a validation message for incorrect email or password
+          
             alert("Invalid email or password.");
             
      

@@ -33,10 +33,10 @@ export default function ManageStaffs() {
     
         // You can perform other staff addition logic here if needed
     
-        // Close the modal after some delay (simulating an asynchronous operation)
+        
         setTimeout(() => {
           handleClose();
-          // Reset the state for the next use
+          
           setToken('');
           setShowAlert(false);
           setStaffName('');

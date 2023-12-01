@@ -68,7 +68,7 @@ export default function Mystatics(props) {
   
     </div>
 
-    <div className={props.isSidebarOpen ? 'sidebar-close-chart' : ''}>
+    <div className={props.isSidebarOpen ? 'sidebar-close-chart' : ''} style={{  boxShadow: "0 9px 11px #1d499914"}}>
 <Chart/>
     </div>
 

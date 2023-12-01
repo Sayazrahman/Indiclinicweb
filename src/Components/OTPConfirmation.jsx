@@ -58,8 +58,8 @@ export default function OTPConfirmation({ onClose }) {
 
   return (
     <>
-      <div className="custom-modal-overlay col-md-4">
-        <div className="custom-modal col-md-4">
+      <div className="custom-modal-overlay">
+        <div className="custom-modal">
           <button onClick={handleModalOTPClose} style={{ float: 'right', border: 'none', background: 'transparent' }}> X </button>
           <div className="modal-content col-md-12">
             <h4 style={{ color: 'orange' }}>Please Enter OTP</h4>
@@ -93,7 +93,7 @@ export default function OTPConfirmation({ onClose }) {
         <>
           <div className="blurred-background" />
           <div className="loading-container">
-            <img src={LoadinGif} alt="Loading" />
+            <img src={LoadinGif} alt="Loading" style={{width: '40px', height: '40px'}} />
             <h5>Signing Up</h5>
           </div>
         </>

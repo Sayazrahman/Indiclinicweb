@@ -66,6 +66,9 @@ export default function ManageStaffs() {
 <section className='px-2'>
 
     <div className='row ms-2'>
+    <div class="col-sm-12 mb-3" style={{ boxShadow: "0 9px 11px #1d499914"}}>
+<h3 class="page-title">Staff Management System</h3>
+</div>
     <div class="col-xxl-1 col-md-4">
 <div class="card card-admin" style={{width: '20rem'}}>
 <div class="card-body cardBody-admin" >
@@ -141,7 +144,7 @@ export default function ManageStaffs() {
     </div>
   
  </div>
- <div className="">
+ <div className="container">
  <Tabs
       defaultActiveKey="profile"
       id="fill-tab-example"
@@ -149,7 +152,7 @@ export default function ManageStaffs() {
       
     >
       <Tab eventKey="profile"  title="All Staffs" >
-      <table class="table table-striped">
+      <table class="table table-striped table-staff">
       <thead>
           <tr>
             
@@ -157,6 +160,8 @@ export default function ManageStaffs() {
             <th>Contact</th>
             <th>Designation</th>
             <th>Status</th>
+            <th>Employee ID</th>
+            <th>Action</th>
            
           </tr>
         </thead>
@@ -167,6 +172,18 @@ export default function ManageStaffs() {
             <td>8798989898</td>
             <td>Receptionist</td>
             <td className="text-success">Present</td>
+            <td>INDS7879</td>
+            <td>
+        <div className="action-buttons-container">
+          <button className="me-2" style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
             
           </tr>
           <tr>
@@ -175,6 +192,18 @@ export default function ManageStaffs() {
             <td>9989898998</td>
             <td>Pharmacist</td>
             <td className="text-danger">Absent</td>
+            <td>INDS7879</td>
+            <td>
+        <div className="action-buttons-container">
+          <button className="me-2" style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
            
           </tr>
           <tr>
@@ -183,6 +212,18 @@ export default function ManageStaffs() {
             <td>7898899890</td>
             <td>Doctor Assistant</td>
             <td className="text-success">Present</td>
+            <td>INDS7879</td>
+            <td>
+        <div className="action-buttons-container">
+          <button className="me-2" style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
             
           </tr>
           <tr>
@@ -191,6 +232,18 @@ export default function ManageStaffs() {
             <td>6878978989</td>
             <td>Receptionist</td>
             <td className="text-danger">Present</td>
+            <td>INDS7879</td>
+            <td>
+        <div className="action-buttons-container">
+          <button className="me-2" style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
+            <i className="bi bi-eye me-1"></i>
+          </button>
+
+          <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
+            <i className="bi bi-x me-1"></i>
+          </button>
+        </div>
+      </td>
            
           </tr>
          

@@ -31,11 +31,11 @@ export default function DashboardSidebar(props) {
                 {/* <li className='nav-item'>  <Link  to= "/ManageStaffs" className='active'><i class="bi bi-people-fill"></i><span className='ms-2'>Manage Staffs</span></Link></li> 
                 */}
         
-          <div className="dashboard-sidebar-submenu" onClick={handleSubMenuToggle}>
-            <i className="bi bi-people-fill" style={{color: 'black'}}></i>
+          <div className="dashboard-sidebar-submenu" onClick={handleSubMenuToggle} style={{cursor : 'pointer'}}>
+            <i className="bi bi-people-fill " style={{color: 'black'}}></i>
             <span className="ms-2">Manage Staffs</span>
             {isSubMenuVisible ? (
-              <i className="bi bi-caret-up-fill ms-auto ms-3" style={{color: 'black',fontSize: '15px'}}></i>
+              <i className="bi bi-caret-up-fill ms-auto ms-3 " style={{color: 'black',fontSize: '15px'}}></i>
             ) : (
               <i className="bi bi-caret-down-fill ms-auto ms-3" style={{color: 'black',fontSize: '15px'}}></i>
             )}
@@ -45,14 +45,14 @@ export default function DashboardSidebar(props) {
            <>
            
           
-              <li className="submenu" style={{border: 'none',background: '#8fc5ff' , }} >
+              <li className="submenu" style={{border: 'none', background: "#f7f7f7" }} >
                 <Link to="/ManageStaffs" className='active'>
-                <i class="bi bi-card-list"></i>  My Staffs 
+                <i class="bi bi-card-list me-2"></i>  My Staffs 
                 </Link>
               </li>
-              <li className="submenu" style={{border: 'none',background: '#8fc5ff'}} >
-                <Link to="/ManageStaffs/subpage2 " className='active' >
-                <i class="bi bi-table"></i> Attendance
+              <li className="submenu" style={{border: 'none', background: "#f7f7f7"}} >
+                <Link to="/StaffAttendance" className='active' >
+                <i class="bi bi-table me-2"></i> Attendance
                 </Link>
               </li>
               </>

@@ -28,6 +28,7 @@ export default function ManageStaffs() {
     
         // Set the token and show the alert
         setToken(generatedToken);
+        sessionStorage.setItem('token', generatedToken); 
         setShowAlert(true);
         setMessage(`Token ${generatedToken} has been sent to ${mobileNumber}.`);
     
@@ -38,6 +39,7 @@ export default function ManageStaffs() {
           handleClose();
           
           setToken('');
+         
           setShowAlert(false);
           setStaffName('');
           setMobileNumber('');
@@ -228,7 +230,7 @@ export default function ManageStaffs() {
           </tr>
           <tr>
         
-            <td>Saquib</td>
+            <td>Abcde</td>
             <td>6878978989</td>
             <td>Receptionist</td>
             <td className="text-danger">Present</td>

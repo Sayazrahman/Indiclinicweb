@@ -25,6 +25,7 @@ export default function UserRegistration() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     user: 'Select User',
+    staffToken:'',
     firstName: '',
     lastName: '',
     highestQualification : 'Select Highest Qualification',
@@ -44,6 +45,7 @@ export default function UserRegistration() {
     password : '',
     confirmpassword : ''
   });
+  const[isDoctorSelected,setIsDoctorSelected]=useState(true)
   const handleReatSelectchange = (selectedOption)=>{
     document.getElementById("errcountry").style.display = 'none'
     setSelectedCountry(selectedOption)
@@ -56,34 +58,42 @@ export default function UserRegistration() {
 
 
   const handleInputChange = (e) => {
-     document.getElementById("inputUser").style.borderColor = '#dee2e6'
- document.getElementById("inputFirstName").style.borderColor = '#dee2e6'
-document.getElementById("lastName").style.borderColor = '#dee2e6'
-document.getElementById("highestQualification").style.borderColor = '#dee2e6'
-document.getElementById("Speciality").style.borderColor = '#dee2e6'
- document.getElementById("gender").style.borderColor = '#dee2e6'
- document.getElementById("dateOfBirth").style.borderColor = '#dee2e6'
- document.getElementById("email").style.borderColor = '#dee2e6'
-document.getElementById("errEmail").style.display = 'none';
- document.getElementById("errphoneNo").style.display = 'none';
-  document.getElementById("phoneNo").style.borderColor = '#dee2e6'
-  document.getElementById("temporaryAddress").style.borderColor = '#dee2e6'
-document.getElementById("permanentAddress").style.borderColor = '#dee2e6'
- document.getElementById("errcountry").style.display = 'none'
- document.getElementById("termsAndConditions").style.color = 'black'
-document.getElementById("privacyPolicy").style.color = 'black'
-document.getElementById("password").style.borderColor = '#dee2e6';
-document.getElementById("errPassword").style.display = 'none';
+//   document.getElementById("inputUser").style.borderColor = '#dee2e6'
+//  document.getElementById("inputFirstName").style.borderColor = '#dee2e6'
+// document.getElementById("lastName").style.borderColor = '#dee2e6'
+// document.getElementById("highestQualification").style.borderColor = '#dee2e6'
+// document.getElementById("Speciality").style.borderColor = '#dee2e6'
+//  document.getElementById("gender").style.borderColor = '#dee2e6'
+//  document.getElementById("dateOfBirth").style.borderColor = '#dee2e6'
+//  document.getElementById("email").style.borderColor = '#dee2e6'
+// document.getElementById("errEmail").style.display = 'none';
+//  document.getElementById("errphoneNo").style.display = 'none';
+//   document.getElementById("phoneNo").style.borderColor = '#dee2e6'
+//   document.getElementById("temporaryAddress").style.borderColor = '#dee2e6'
+// document.getElementById("permanentAddress").style.borderColor = '#dee2e6'
+//  document.getElementById("errcountry").style.display = 'none'
+//  document.getElementById("termsAndConditions").style.color = 'black'
+// document.getElementById("privacyPolicy").style.color = 'black'
+// document.getElementById("password").style.borderColor = '#dee2e6';
+// document.getElementById("errPassword").style.display = 'none';
  
-  document.getElementById("confirmpassword").style.borderColor = 'none';
-  document.getElementById("errConfirmPassword").style.display = 'none';
-     
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+//   document.getElementById("confirmpassword").style.borderColor = 'none';
+//   document.getElementById("errConfirmPassword").style.display = 'none';
+const { name, value } = e.target;
+setFormData({
+  ...formData,
+  [name]: value,
+});
 
+const element = document.getElementById(name);
+
+if (element) {
+  element.style.borderColor = '#dee2e6';
+}
+
+if (name === 'user') {
+  setIsDoctorSelected(value === 'Doctor');
+} 
   };
   useEffect(() => {
   
@@ -300,6 +310,17 @@ const handleModalClose = () => {
   navigate('/Indiclinicweb')
   const savedFormData = JSON.parse(localStorage.getItem('formData'));
 };
+const handleVerifying=()=>{
+  const staffToken= window.sessionStorage.getItem('token')
+  if(formData.staffToken==staffToken){
+  alert('verification DOne ')
+  console.log('done')
+  }
+  else{
+    alert('error')
+    console.log('not verified')
+  }
+}
 
 
   return (
@@ -318,7 +339,23 @@ const handleModalClose = () => {
       <option>Staff</option>
     </select>
     </div>
-         <form className="row g-3 mt-2">
+
+    {!isDoctorSelected && (
+        <div className="col"  style={{marginTop:'2rem'}}>
+          <label htmlFor="inputStaffToken" className="form-label">Staff Token <span className="requireFields">*</span></label>
+          <input
+        
+            type="text"
+            id="inputStaffToken"
+            name="staffToken"
+            value={formData.staffToken}
+            className="form-control"
+            onChange={handleInputChange}
+          />
+          <button type='button 'Class="btn btn-primary mt-4"  onClick={handleVerifying}>Verify</button>
+        </div>
+      )}
+       {  isDoctorSelected && <form className="row g-3 mt-2">
       
   <div className="col-md-12">
   <label for="inputEmail4" className="form-label"> Doctor's First Name</label>
@@ -469,7 +506,7 @@ const handleModalClose = () => {
     <button type="reset" className="btn btn col-md-5 me-2" onClick = {handleOnReset} style={{background: '#ff7b7b',fontWeight: 'bolder',borderRadius: '2px'}}><img src={reset}></img>Reset</button>
    
   </div>
-</form>
+</form>}
     </div>
   
     </div>

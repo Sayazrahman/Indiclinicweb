@@ -310,7 +310,7 @@ const handleModalClose = () => {
       </div>
     <div className='Registration-container col-md-5'>
 
-    <div className="col-md-4">
+    <div className="col-md-6">
     <label for="inputUser" className="form-label">Register As <span className="requireFields" >*</span></label>
     <select id="inputUser" name="user" value={formData.user} className="form-select" onChange = {handleInputChange} >
       <option selected>Select User</option>

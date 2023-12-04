@@ -1260,6 +1260,12 @@ table thead {
   width: 100%;
   overflow-x: auto;
 }
+table thead th {
+  color: #090051;
+  font-family: sans-serif;
+  border-bottom: none;
+
+}
 
 table th {
   padding: 20px;
@@ -1747,3 +1753,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 25px;
 }
 
+.appointmentBtnactive{
+  background-color: rgb(9, 0, 81);
+  color: white;
+  border-radius: 12px;
+}
+.appointmentBtninactive{
+  background-color: white;
+  border: 1px solid rgb(230, 230, 230);
+  color: black;
+  border-radius: 12px;
+}

@@ -3,14 +3,22 @@ import { NavLink , Link} from 'react-router-dom';
 import HomeLogo from '../../../assets/HomeLogo.jpg'
 import chevrondown from "../../../assets/Icons/chevron-down.svg"
 import Ayaz from '../../../assets/Ayaz.jpg'
+import HomeClinicPatient  from '../../../assets/Icons/HomeClinicPatient .png'
+import onlinePatient  from '../../../assets/Icons/onlinePatient.png'
+import Sateliteclinic  from '../../../assets/Icons/Sateliteclinic.png'
 
 
 export default function DashboardSidebar(props) {
   const [isSubMenuVisible, setSubMenuVisible] = useState(false);
+  const [ispateintmenu, setPatientmenu] = useState(false);
 
   const handleSubMenuToggle = () => {
     setSubMenuVisible(!isSubMenuVisible);
   };
+
+  const handleSubmenuPatient =()=>{
+    setPatientmenu(!ispateintmenu)
+  }
   return (
     <>
   
@@ -20,13 +28,47 @@ export default function DashboardSidebar(props) {
 <img src={Ayaz} />
 <div className='mt-1'><h6 style={{color: 'white'}}>Dr. Maroof Jilani</h6></div>
 <div className='mt-1'><p>MBBS, MD - </p></div>
+
   </div>
 </div>
 
                <ul className='sideUl'>
                 <li className='nav-item'> <Link  to= "/MyDashboard"   activeclassname='active' className='active'> <i class="bi bi-layout-text-window-reverse"></i><span className='ms-2'>Dashboard</span></Link></li>
-                <li  className='nav-item'> <Link activeClassName="active" to= "/MyDashboard"  className='active'><i class="bi bi-calendar2-check-fill"></i><span className='ms-2'>Appointments</span></Link></li>
-                <li className='nav-item'> <Link  to= "/MyDashboard"className='active'> <i class="bi bi-heart-pulse-fill"></i><span className='ms-2'>My Patients</span></Link></li>
+                <li  className='nav-item'> <Link activeClassName="active" to= "/Appointments"  className='active'><i class="bi bi-calendar2-check-fill"></i><span className='ms-2'>Appointments</span></Link></li>
+                <div className="dashboard-sidebar-submenu" onClick={handleSubmenuPatient} style={{cursor : 'pointer'}}>
+                <i class="bi bi-heart-pulse-fill"></i>
+            <span className="ms-2">My Patients</span>
+            {ispateintmenu ? (
+              
+              <i className="bi bi-caret-up-fill ms-auto ms-3 " style={{color: 'black',fontSize: '15px'}}></i>
+            ) : (
+              <i className="bi bi-caret-down-fill ms-auto ms-3" style={{color: 'black',fontSize: '15px'}}></i>
+            )}
+          </div>
+          {/* Dropdown content */}
+          {ispateintmenu && (
+           <>
+           
+          
+              <li className="submenu" style={{border: 'none', background: "#f7f7f7" }} >
+                <Link to="/ManageStaffs" className='active'>
+                <img  src={HomeClinicPatient } alt="" style={{width : '22px'}} /> Home Clinic Patients
+                </Link>
+              </li>
+              <li className="submenu" style={{border: 'none', background: "#f7f7f7"}} >
+                <Link to="/StaffAttendance" className='active' >
+                <img  src={onlinePatient } alt="" style={{width : '22px'}} /> Online Clinic Patients
+                </Link>
+              </li>
+              <li className="submenu" style={{border: 'none', background: "#f7f7f7"}} >
+                <Link to="/StaffAttendance" className='active' >
+                <img  src={Sateliteclinic } alt="" style={{width : '22px'}} />  Satelite Clinic Patients
+                </Link>
+              </li>
+              </>
+           
+          )}
+       
                 <li className='nav-item'> <Link  to= "/ManageClinic"className='active'> <i class="bi bi-heart-pulse-fill"></i><span className='ms-2'>My Clinic</span></Link></li>
                 {/* <li className='nav-item'>  <Link  to= "/ManageStaffs" className='active'><i class="bi bi-people-fill"></i><span className='ms-2'>Manage Staffs</span></Link></li> 
                 */}

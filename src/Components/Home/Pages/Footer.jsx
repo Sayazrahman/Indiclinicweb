@@ -5,7 +5,7 @@ export default function Footer() {
     <>
     
     <footer className='footer'>
-    <div className="row footerContainer mt-2">
+    <div className="footerContainer mt-2">
         <div className='aboutSection'>
         <img className='HomeNavLogo mt-4' src={HomeLogo}/>
         <div className = "info"><p >Your one-stop destination for healthcare. Find trusted doctors, book appointments, consult online, and purchase medicines conveniently. Your well-being, our priority</p></div>

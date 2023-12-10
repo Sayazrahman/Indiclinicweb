@@ -28,14 +28,16 @@ export default function HomeNavbar() {
 
         <div className={`d-flex align-items-center ${isSidebarOpen ? 'LogoContainer' : ''}`}>
         <i class="bi bi-list sidebarOpenmenuAlign" onClick={toggleSidebar} style={{fontSize: '35px' , color : 'black',fontWeight : 'bolder'}}></i>
-          <img className='HomeNavLogo' src={HomeLogo} alt='Logo' />
+          <Link to= '/Indiclinicweb'> <img className='HomeNavLogo'  src={HomeLogo} alt='Logo' style={{cursor: 'pointer'}} /> </Link> 
         </div>
 
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav ml-auto ms-5'>
             <li className='nav-item'>
               <Link
+               activeclassname='active'
               
+               to='/Indiclinicweb'
                 className='nav-link'
               >
                 

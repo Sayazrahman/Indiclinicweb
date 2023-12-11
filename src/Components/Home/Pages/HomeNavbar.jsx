@@ -20,23 +20,25 @@ export default function HomeNavbar() {
     <>
    <div className={`MainNav ${isSidebarOpen ? 'sidebar-open' : ''}`}>
   <header className='header header-custom header-fixed header-one header-space'>
-    <div className='container Navcontainer'>
+    <div className='Navcontainer'>
       <nav className='navbar navbar-expand-lg navbar '>
     
-          <span className= "sidebarOpenmenuAlign" onClick={toggleSidebar}><i class="bi bi-list" style={{fontSize: '35px' , color : 'white'}}></i></span>
+        
       
 
-        <div className='logo mt-0' style={{margin: 'auto'}}>
-          <img className='HomeNavLogo mt-4' src={HomeLogo} alt='Logo' />
+        <div className={`d-flex align-items-center ${isSidebarOpen ? 'LogoContainer' : ''}`}>
+        <i class="bi bi-list sidebarOpenmenuAlign" onClick={toggleSidebar} style={{fontSize: '35px' , color : 'black',fontWeight : 'bolder'}}></i>
+          <Link to= '/Indiclinicweb'> <img className='HomeNavLogo'  src={HomeLogo} alt='Logo' style={{cursor: 'pointer'}} /> </Link> 
         </div>
 
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav ml-auto ms-5'>
             <li className='nav-item'>
               <Link
+               activeclassname='active'
               
+               to='/Indiclinicweb'
                 className='nav-link'
-                to='/Indiclinicweb'
               >
                 
                 <i class="bi bi-house"></i>  Home
@@ -73,8 +75,8 @@ export default function HomeNavbar() {
           </ul>
         </div>
 
-        <div className='HomeBtn mt-4'>
-          <button className='btn btn registerbtn mx-2 mt-1'>
+        <div className='HomeBtn pe-4 me-3'>
+          <button className='btn btn registerbtn mx-2 mt-1' style={{background : '#56c8ff'}}>
          
             <img
               className='me-2'
@@ -85,7 +87,7 @@ export default function HomeNavbar() {
             
             <Link className='nav-item' to= "/UserRegistration">Signup</Link> 
           </button>
-          <button className='btn btn-success navbtn mt-1'> <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
+          <button className='btn btn-success navbtn mt-1' > <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
         </div>
       </nav>
     </div>

@@ -1787,7 +1787,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 65px;
   height: 25px;
 }
-
+.staffForm{
+  position: relative;
+  top:6rem;
+ 
 .appointmentBtnactive{
   background-color: rgb(9, 0, 81);
   color: white;
@@ -1817,4 +1820,4 @@ margin-top: 2rem;
   
   
 }
-  
+  }

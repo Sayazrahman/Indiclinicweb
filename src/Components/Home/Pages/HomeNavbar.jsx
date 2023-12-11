@@ -48,7 +48,7 @@ export default function HomeNavbar() {
               <Link
                 activeclassname='active'
                 className='nav-link'
-                to='/doctors'
+                to='/Billing'
               >
                <i class="bi bi-person-add"></i> Doctors
               </Link>

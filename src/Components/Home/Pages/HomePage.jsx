@@ -21,7 +21,7 @@ export default function HomePage() {
   ]
   return (
     <>
-    <section class="banner-section pb-2">
+  <section class="banner-section pb-2">
    
 <div class="container">
 <div class="row align-items-center">

@@ -25,7 +25,7 @@ export default function DashboardNavbar(props) {
   return (
     <>
       <div className="MainNav" >
-        <header className="header header-custom header-fixed header-one header-space" style={{  background: "rgb(9 0 81)", zIndex: 1, position: 'fixed' }}>
+        <header className="header header-custom header-fixed header-one header-space" style={{  background: "rgb(9 0 81)", zIndex: 1, position: 'fixed' , height: '80px'}}>
           <div className={`Navcontainer dashboardNav ${props.isSidebarOpen ? 'dashboardNav-expand' : ''}` } >
             <nav className={`navbar navbar-expand-lg navbar ${props.isSidebarOpen? 'Navcontainer-sidebarclose' : ''}`}>
               <i className="bi bi-filter-right sidebartoggleicon  mt-1" style={{fontSize: '30px'}} onClick={props.toggleSidebar}></i>

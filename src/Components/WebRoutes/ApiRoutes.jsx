@@ -8,6 +8,7 @@ import AdminDashboard from '../Dashboard/Admin/AdminDashboard'
 import LayoutManageStaffs from '../DoctorSidebarPages/Layouts/LayoutManageStaffs'
 import LayoutManageClinic from '../DoctorSidebarPages/Layouts/LayoutManageClinic'
 import LayoutStaffAttendance from '../DoctorSidebarPages/Layouts/LayoutStaffAttendance'
+import LayoutStaffRegistration from '../Staff/Layout/LayoutStaffRegistration'
 
 
 
@@ -23,6 +24,7 @@ export default function ApiRoutes() {
    <Route path="/ManageStaffs" element={<LayoutManageStaffs/>} />
    <Route path="/StaffAttendance" element={<LayoutStaffAttendance/>} />
    <Route path="/ManageClinic" element={<LayoutManageClinic/>} />
+   <Route path="/StaffRegistration" element={<LayoutStaffRegistration/>} />
   
    
 </Routes>

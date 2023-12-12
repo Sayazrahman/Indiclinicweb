@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import{ Modal ,Button}from 'react-bootstrap'
 const StaffRegistration = () => {
   
   const[formValue,setFormValue]=useState({
@@ -16,10 +16,16 @@ const StaffRegistration = () => {
     Gender:'',
     TemproryAdress:'',
     PermanentAdress:'',
-    PrivacyPolicy:false
+    DateOfJoining:'',
+    TermCondition:false
 
   })
   const[submit,setSubmit]=useState(false)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const HandleOnChange=(e)=>{
     const{name,value}=e.target;
     setFormValue({...formValue,[name]:value})
@@ -47,6 +53,9 @@ const StaffRegistration = () => {
     else if (formValue.PAN==='') {
       document.getElementById("PAN").style.borderColor = 'red'
     }
+    else if (formValue.DateOfJoining==='') {
+      document.getElementById("DateOfJoining").style.borderColor = 'red'
+    }
     else if (formValue.DOB==='') {
       document.getElementById("dateOfBirth").style.borderColor = 'red'
     }
@@ -59,8 +68,8 @@ const StaffRegistration = () => {
     else if (formValue.TemproryAdress==='') {
       document.getElementById("temporaryAddress").style.borderColor = 'red'
     }
-    else if (formValue.PrivacyPolicy===false) {
-      document.getElementById("PrivacyPolicy").style.color = 'red'
+    else if (formValue.TermCondition === false) {
+      document.getElementById("TermCondition").style.color = 'red'
     }
    else{
     setSubmit(true)
@@ -76,52 +85,34 @@ const StaffRegistration = () => {
 
   return (
     <div className='container-fluid  staffForm'>
-      <h1 className='text-center '>Staff Registration</h1>
-      {submit && (<p>Thankyou For SignIn</p>)}
+      <h1 className='  text-center '>Staff Registration</h1>
+      {submit && (<Modal
+        show={show}
+        onHide={handleClose}
+        dialogClassName="modal-90w" // Adjust the width of the modal
+          aria-labelledby="example-custom-modal-styling-title"
+          centered
+      >
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+         Thankyou For Register 
+        </Modal.Body>
+       
+         
+      </Modal>)}
     <form  onSubmit={handleSubmit}>
       <div className="row">
-      <div class= " col-md-6 mb-3">
+      <div class= " col-md-4 ">
     <label for="FirstName" class="form-label">First Name</label>
     <input type="text" class="form-control"  placeholder='First Name'id='FirstName' name='FirstName'  value={formValue.FirstName} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
     
   </div>
  
-  <div class= " col-md-6 mb-3">
+  <div class= " col-md-4 ">
     <label for="LastName" class="form-label">Last Name</label>
     <input type="text" class="form-control" id='LastName'name='LastName' value={formValue.LastName} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
     
-  </div>
-  <div class= " col-md-4 mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="EmailAddress" aria-describedby="emailHelp" placeholder='Email Address' name='Email'value={formValue.Email} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-   
-  </div>
- 
-  <div className="col-md-4">
-    <label for="inputAddress2" className="form-label">Contact .</label>
-    <input type="number" className="form-control"name = "PhoneNo" id="PhoneNo"value={formValue.PhoneNo} onChange={HandleOnChange}  onFocus={HandleOnFocus}/>
-    <small id="errphoneNo" class="form-text text-danger" ></small>
-   
-  </div>
-  <div className="col-md-4">
-    <label for="Qualification" className="form-label">Qualification</label>
-    <input type="text" className="form-control" name = "Qualification"  id="Qualification"value={formValue.Qualification} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-   
-  </div>
-  <div className="col-md-4">
-    <label for="Aadhar Number" className="form-label">Aadhar Number</label>
-    <input type="number" className="form-control" id="AadharNumber" name='Adhaar'  placeholder="Aadhar Number" value={formValue.Adhaar} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-    
-  </div>
-  <div className="col-md-4">
-    <label for="PAN Number" className="form-label">PAN Number</label>
-    <input type="number" className="form-control" id="PAN" name='PAN'  placeholder="PAN Number" value={formValue.PAN} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-   
-  </div>
-  <div className="col-md-4">
-    <label for="inputPassword4" className="form-label">Date of Birth</label>
-    <input type="date" className="form-control" name = "DOB"  id="dateOfBirth"value={formValue.DOB} onChange={HandleOnChange}  onFocus={HandleOnFocus}/>
-   
   </div>
   <div className="col-md-4">
     <label for="inputState" className="form-label">Gender</label>
@@ -134,27 +125,85 @@ const StaffRegistration = () => {
     </select>
    
     </div>
-  <div className="col-md-4">
+  <div class= " col-md-4 mt-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="EmailAddress" aria-describedby="emailHelp" placeholder='Email Address' name='Email'value={formValue.Email} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
+   
+  </div>
+ 
+  <div className="col-md-4  mt-3">
+    <label for="inputAddress2" className="form-label">Contact No.</label>
+    <input type="number" className="form-control"name = "PhoneNo" id="PhoneNo"value={formValue.PhoneNo} onChange={HandleOnChange}  onFocus={HandleOnFocus}/>
+    <small id="errphoneNo" class="form-text text-danger" ></small>
+   
+  </div>
+  <div className="col-md-4 mt-3">
+    <label for="Qualification" className="form-label">Education</label>
+    <select  id="Qualification" name = "Qualification"   className="form-select" value={formValue.Qualification}  onChange={HandleOnChange} onFocus={HandleOnFocus}>
+      <option selected>Select Education</option>
+      <option>10th</option>
+      <option>12th</option>
+      <option> Diploma or certificate Course</option>
+      <option>Graduate(BSc,BCA ,BCom,etc)</option>
+      <option>Licensed Practical Nurse (LPN) or Licensed Vocational Nurse (LVN)</option>
+      <option>Registered Nurse</option>
+      <option>Medical Laboratory Technologist</option>
+      <option>Radiologic Technologist</option>
+      <option>Pharmacist</option>
+      <option>Hospital Administrator</option>
+      <option>Respiratory Therapist</option>
+      <option>Dietitian / Nutritionist:</option>
+      <option>Psychologist</option>
+      <option>Biomedical Engineer</option>
+      <option>Infection Control Practitioner</option>
+      <option>Health Information Technology (HIT) Specialist</option>
+      <option>Medical Office / Health Administration Staff</option>
+      <option>other</option>
+    </select>
+   
+    </div>
+  <div className="col-md-4  mt-3">
+    <label for="Aadhar Number" className="form-label">Aadhar Number</label>
+    <input type="number" className="form-control" id="AadharNumber" name='Adhaar'  placeholder="Aadhar Number" value={formValue.Adhaar} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
+    
+  </div>
+  <div className="col-md-4  mt-3">
+    <label for="PAN Number" className="form-label">PAN Number</label>
+    <input type="number" className="form-control" id="PAN" name='PAN'  placeholder="PAN Number" value={formValue.PAN} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
+   
+  </div>
+  <div className="col-md-4  mt-3">
+    <label for="Date Of Joining" className="form-label">Date Of Joining</label>
+    <input type="date" className="form-control" id="DateOfJoining" name='DateOfJoining'  placeholder="" value={formValue.DateOfJoining} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
+   
+  </div>
+  <div className="col-md-4  mt-3">
+    <label for="inputPassword4" className="form-label">Date of Birth</label>
+    <input type="date" className="form-control" name = "DOB"  id="dateOfBirth"value={formValue.DOB} onChange={HandleOnChange}  onFocus={HandleOnFocus}/>
+   
+  </div>
+  
+  <div className="col-md-4  mt-3">
     <label for="inputAddress" className="form-label">Permanent Address</label>
     <input type="text" className="form-control" id="permanentAddress" name='PermanentAdress'  placeholder="Purana Quila, Siwan"value={formValue.PermanentAdress} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
    
   </div>
   
-    <div className="col-md-4">
+    <div className="col-md-4  mt-3">
     <label for="inputAddress" className="form-label">Temporary Address</label>
     <input type="text" id= "temporaryAddress" name='TemproryAdress'  className="form-control" placeholder="Sarfarazganj,Lucknow"value={formValue.TemproryAdress}  onChange={HandleOnChange} onFocus={HandleOnFocus}/>
  </div>
  
-  <div className="col-12 mt-4" >
+  <div className="col-12 mt-3 " >
     <div className="form-check">
-      <input className="form-check-input"   type="checkbox"  name='PrivacyPolicy'  for="gridCheck"  onChange={HandleOnChange}value={formValue.PrivacyPolicy}  onFocus={HandleOnFocus}/>
-      <label className="form-check-label"  id="PrivacyPolicy" for="gridCheck">
-      I accept Privacy Policy
+      <input className="form-check-input"   type="checkbox"  name='TermCondition'  for="gridCheck"  onChange={HandleOnChange}value={formValue.TermCondition}  onFocus={HandleOnFocus}/>
+      <label className="form-check-label"  id="TermCondition" for="gridCheck">
+      I accept terms and conditions
       </label>
     </div>
   </div>
-   <div className="col-12 mt-4 mb-4" style={{textAlign: 'center'}}>
-    <button type="submit" className="btn btn col-md-5 me-2 signup" style={{background: 'rgb(142 249 142)', fontWeight: 'bolder',borderRadius: '2px',width:'9rem'}}>Signup</button>
+   <div className="col-12 mt-3" style={{textAlign: 'center'}}>
+    <button type="submit" className="btn btn col-md-5 me-2 signup" style={{background: 'rgb(142 249 142)', fontWeight: 'bolder',borderRadius: '2px',width:'9rem'}} onClick={handleShow}>Register</button>
     <button type="reset" className="btn btn col-md-5 me-2" style={{background: '#ff7b7b',fontWeight: 'bolder',borderRadius: '2px',width:'9rem'}}>Reset</button>
   </div>
   </div>

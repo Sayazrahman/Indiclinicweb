@@ -44,14 +44,24 @@ const StaffRegistration = () => {
     else if (formValue.PhoneNo==='') {
       document.getElementById("PhoneNo").style.borderColor = 'red'
     }
+    else if (formValue.PhoneNo.length > 10) {
+      document.getElementById(" errphoneNo").innerHTML='Please Enter  Valid Contact no.'
+    }
+    
     else if (formValue.Qualification==='') {
       document.getElementById("Qualification").style.borderColor = 'red'
     }
     else if (formValue.Adhaar==='') {
       document.getElementById("AadharNumber").style.borderColor = 'red'
     }
+    else if (!/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/.test(formValue.Adhaar)) {
+      document.getElementById("errAadhar").innerHTML='Please Enter  Valid Aadhar no.'
+    }
     else if (formValue.PAN==='') {
       document.getElementById("PAN").style.borderColor = 'red'
+    }
+    else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(formValue.PAN)) {
+      document.getElementById("errPanNo").innerHTML='Please Enter  Valid PAN no.'
     }
     else if (formValue.DateOfJoining==='') {
       document.getElementById("DateOfJoining").style.borderColor = 'red'
@@ -165,11 +175,12 @@ const StaffRegistration = () => {
   <div className="col-md-4  mt-3">
     <label for="Aadhar Number" className="form-label">Aadhar Number</label>
     <input type="number" className="form-control" id="AadharNumber" name='Adhaar'  placeholder="Aadhar Number" value={formValue.Adhaar} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-    
+    <small id="errAadhar" class="form-text text-danger"></small>
   </div>
   <div className="col-md-4  mt-3">
     <label for="PAN Number" className="form-label">PAN Number</label>
     <input type="number" className="form-control" id="PAN" name='PAN'  placeholder="PAN Number" value={formValue.PAN} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
+    <small id="errPanNo" class="form-text text-danger" ></small>
    
   </div>
   <div className="col-md-4  mt-3">

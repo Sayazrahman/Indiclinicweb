@@ -1801,28 +1801,31 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   border-radius: 12px;
 }
-.appointmentBtninactive{
+.appointmentBtninactive {
   background-color: white;
   border: 1px solid rgb(230, 230, 230);
   color: black;
   border-radius: 12px;
 }
-.specialists-box {
-  height: 15rem;
-  border: 1px solid lightblue;
-text-align: center;
-margin: auto;
-  border-radius: 50px;
-  box-shadow: rgba(29, 145, 153, 0.979) 0px 9px 11px
 
+
+
+
+  .specialists-box {
+    height: 15rem;
+    border: 1px solid lightblue;
+  text-align: center;
+  margin: auto;
+    border-radius: 50px;
+    box-shadow: rgba(29, 145, 153, 0.979) 0px 9px 11px
+  
+      
+  }
+  .specialists-box img {
+  margin-top: 2rem;
+    height: 8rem;
+    width: 8rem;
+   
     
-}
-.specialists-box img {
-margin-top: 2rem;
-  height: 8rem;
-  width: 8rem;
- 
-  
-  
-}
-  
+    
+  }

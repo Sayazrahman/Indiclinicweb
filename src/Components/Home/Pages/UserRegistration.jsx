@@ -315,7 +315,7 @@ const handleModalClose = () => {
 const handleVerifying=()=>{
  
   ;
-  const staffToken= window.sessionStorage.getItem('token').trim()
+  const staffToken= window.sessionStorage.getItem('token') ? window.sessionStorage.getItem('token').trim() : setInvalidToken(true)
   //  console.log('formData.staffToken:', formData.staffToken);
   // console.log('staffToken:', staffToken);
   if(formData.staffToken === staffToken){

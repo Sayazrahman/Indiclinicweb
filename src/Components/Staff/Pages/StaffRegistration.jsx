@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import{ Modal ,Button}from 'react-bootstrap'
+import OTPConfirmation from '../../OTPConfirmation'
+import LoadinGif from '../../../assets/Icons/1496.gif'
+import RegistrationModal from '../../RegistrationModal';
 const StaffRegistration = () => {
   
   const[formValue,setFormValue]=useState({
@@ -20,6 +23,9 @@ const StaffRegistration = () => {
     TermCondition:false
 
   })
+  const [loading, setLoading] = useState(false);
+  const [showOTPConfirmation, setShowOTPConfirmation] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
   const[submit,setSubmit]=useState(false)
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -82,8 +88,18 @@ const StaffRegistration = () => {
       document.getElementById("TermCondition").style.color = 'red'
     }
    else{
-    setSubmit(true)
-    console.log('jkhjx')
+    // setSubmit(true)
+    // console.log('jkhjx')
+    setTimeout(() => {
+      setLoading(true);
+  
+      // After 2 seconds, show the OTP modal
+      setTimeout(() => {
+        setShowOTPConfirmation(true);
+        setLoading(false); // Stop loading
+      }, 2000);
+    }, 2000);
+    window.sessionStorage.setItem('RegistrationData', JSON.stringify(formValue));
    }
   };
   const HandleOnFocus=()=>{
@@ -94,6 +110,7 @@ const StaffRegistration = () => {
 
 
   return (
+  <>
     <div className='container-fluid  staffForm'>
       <h1 className='  text-center '>Staff Registration</h1>
       {submit && (<Modal
@@ -228,8 +245,27 @@ const StaffRegistration = () => {
   </div>
 </form>
 </div>
-   
-  )
+    {showOTPConfirmation && (
+      <OTPConfirmation />
+    )}
+  
+  
+  {loading && (
+      <>
+        <div className="blurred-background" />
+        <div className="loading-container">
+          <img src={LoadinGif} alt="Loading" style={{width: '40px', height: '40px'}} />
+          <h5>Please wait...!</h5>
+        </div>
+      </>
+    )}
+    {successMessage && (
+        <div>
+          <RegistrationModal message={successMessage}   />
+        </div>
+      )}
+ 
+    </>)
 }
 
 export default StaffRegistration

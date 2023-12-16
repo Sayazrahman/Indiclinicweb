@@ -16,7 +16,7 @@ const StaffRegistration = () => {
     Gender:'',
     TemproryAdress:'',
     PermanentAdress:'',
-    DateOfJoining:'',
+    Designation:'Receptionist',
     TermCondition:false
 
   })
@@ -51,18 +51,18 @@ const StaffRegistration = () => {
     else if (formValue.Qualification==='') {
       document.getElementById("Qualification").style.borderColor = 'red'
     }
-    else if (formValue.Adhaar==='') {
-      document.getElementById("AadharNumber").style.borderColor = 'red'
-    }
-    else if (!/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/.test(formValue.Adhaar)) {
-      document.getElementById("errAadhar").innerHTML='Please Enter  Valid Aadhar no.'
-    }
-    else if (formValue.PAN==='') {
-      document.getElementById("PAN").style.borderColor = 'red'
-    }
-    else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(formValue.PAN)) {
-      document.getElementById("errPanNo").innerHTML='Please Enter  Valid PAN no.'
-    }
+    // else if (formValue.Adhaar==='') {
+    //   document.getElementById("AadharNumber").style.borderColor = 'red'
+    // }
+    // else if (!/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/.test(formValue.Adhaar)) {
+    //   document.getElementById("errAadhar").innerHTML='Please Enter  Valid Aadhar no.'
+    // }
+    // else if (formValue.PAN==='') {
+    //   document.getElementById("PAN").style.borderColor = 'red'
+    // }
+    // else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(formValue.PAN)) {
+    //   document.getElementById("errPanNo").innerHTML='Please Enter  Valid PAN no.'
+    // }
     else if (formValue.DateOfJoining==='') {
       document.getElementById("DateOfJoining").style.borderColor = 'red'
     }
@@ -112,7 +112,7 @@ const StaffRegistration = () => {
          
       </Modal>)}
     <form  onSubmit={handleSubmit}>
-      <div className="row">
+      <div className="row mb-5">
       <div class= " col-md-4 ">
     <label for="FirstName" class="form-label">First Name</label>
     <input type="text" class="form-control"  placeholder='First Name'id='FirstName' name='FirstName'  value={formValue.FirstName} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
@@ -124,7 +124,15 @@ const StaffRegistration = () => {
     <input type="text" class="form-control" id='LastName'name='LastName' value={formValue.LastName} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
     
   </div>
-  <div className="col-md-4">
+
+
+  <div className="col-md-4 ">
+    <label for="Designation" className="form-label">Designation</label>
+    <input type="text" className="form-control" id="designation" name='designation'  placeholder="" value={formValue.Designation} onChange={HandleOnChange} disabled onFocus={HandleOnFocus}/>
+   
+  </div>
+
+  <div className="col-md-4 mt-3">
     <label for="inputState" className="form-label">Gender</label>
     <select id="gender" name = "Gender"  className="form-select" value={formValue.Gender} onChange={HandleOnChange} onFocus={HandleOnFocus}>
       <option selected>Select Gender</option>
@@ -135,6 +143,10 @@ const StaffRegistration = () => {
     </select>
    
     </div>
+
+
+  
+
   <div class= " col-md-4 mt-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="EmailAddress" aria-describedby="emailHelp" placeholder='Email Address' name='Email'value={formValue.Email} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
@@ -183,11 +195,7 @@ const StaffRegistration = () => {
     <small id="errPanNo" class="form-text text-danger" ></small>
    
   </div>
-  <div className="col-md-4  mt-3">
-    <label for="Date Of Joining" className="form-label">Date Of Joining</label>
-    <input type="date" className="form-control" id="DateOfJoining" name='DateOfJoining'  placeholder="" value={formValue.DateOfJoining} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
-   
-  </div>
+  
   <div className="col-md-4  mt-3">
     <label for="inputPassword4" className="form-label">Date of Birth</label>
     <input type="date" className="form-control" name = "DOB"  id="dateOfBirth"value={formValue.DOB} onChange={HandleOnChange}  onFocus={HandleOnFocus}/>

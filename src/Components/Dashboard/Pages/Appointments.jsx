@@ -1,6 +1,7 @@
 import React from 'react';
 import Ayaz from '../../../assets/Ayaz.jpg'
-
+import rescheduling from '../../../assets/Icons/rescheduling.png'
+import filter from '../../../assets/Icons/adjustments.png'
 export default function Appointments(props) {
   return (
    <>
@@ -12,13 +13,19 @@ export default function Appointments(props) {
             <button>Today</button>
             <button className='mx-2'>Tomorrow</button>
             <button>View All</button>
+
           </div>
+          <div className='filterBtn'>
+          <img title='Filter Appointments' src={filter}/>
+            </div>
+         
         </div>
         <div>
         <table className='striped'>
   <thead>
    
       <th scope="col"> Patient Name</th>
+      <th scope="col"> P.ID</th>
       <th scope="col">Appointment Date</th>
       <th scope="col">Purpose</th>
       <th scope="col">Patient Type</th>
@@ -28,9 +35,10 @@ export default function Appointments(props) {
   </thead>
   <tbody>
     <tr className='striped'>
-      <div  className= "d-flex">
-      <td> <img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}}  className='me-1' ></img><span > S Ayaz Rahman</span></td>
-      </div>
+
+      <td>S Ayaz Rahman</td>
+      <td>PID343532</td>
+
       <td>
         22 Oct 2023<br />
         <span style={{ color: '#20c0f3' }}>10 AM</span>
@@ -41,23 +49,27 @@ export default function Appointments(props) {
       <td>
         <div className="action-buttons-container">
           <button style={{ background: 'rgba(2, 182, 179, 0.12)', color: '#1db9aa',border: 'none' }}>
-            <i className="bi bi-eye me-1"></i>
+            <i title='View' className="bi bi-eye me-1"></i>
           </button>
           <button className='mx-2' style={{ background: 'rgba(2, 182, 179, 0.12)', color: 'green' ,border: 'none'}}>
-            <i className="bi bi-check-lg me-1"></i>
+            <i title='Accept' className="bi bi-check-lg me-1"></i>
           </button>
           <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
-            <i className="bi bi-x me-1"></i>
+            <i  title='Reject' className="bi bi-x me-1"></i>
           </button>
+          <button className='ms-2' style={{ background: 'rgb(253 255 145 / 65%)', color: '#02490e' ,border: 'none'}}>
+            <i title='Reschedule' class="bi bi-calendar-week" ></i>
+          </button>
+
         </div>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr className='striped'>
-      <div className= "d-flex">
-      <td><img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      </div>
+  
+      <td>S Ayaz Rahman</td>
+      <td>PID343532</td>
      
       <td>
         22 Oct 2023<br />
@@ -77,6 +89,9 @@ export default function Appointments(props) {
           <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
             <i className="bi bi-x me-1"></i>
           </button>
+          <button className='ms-2' style={{ background: 'rgb(253 255 145 / 65%)', color: '#02490e' ,border: 'none'}}>
+            <i title='Reschedule' class="bi bi-calendar-week"></i>
+          </button>
         </div>
       </td>
     </tr>
@@ -88,10 +103,10 @@ export default function Appointments(props) {
   
   <tbody>
     <tr className='striped'>
-      <div className= "d-flex">
-      <td><img src={Ayaz} style={{width: 'auto', height: '6.5vh' ,borderRadius: '100%'}} className='me-1' ></img>S Ayaz Rahman</td>
-      </div>
-      
+    
+      <td>S Ayaz Rahman</td>
+      <td>PID343532</td>
+
       <td>
         22 Oct 2023<br />
         <span style={{ color: '#20c0f3' }}>10 AM</span>
@@ -109,6 +124,9 @@ export default function Appointments(props) {
           </button>
           <button  style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
             <i title="cancel" className="bi bi-x me-1"></i>
+          </button>
+          <button className='ms-2' style={{ background: 'rgb(253 255 145 / 65%)', color: '#02490e' ,border: 'none'}}>
+            <i title='Reschedule' class="bi bi-calendar-week"></i>
           </button>
         </div>
       </td>

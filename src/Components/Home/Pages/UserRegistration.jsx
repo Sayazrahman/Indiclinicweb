@@ -25,6 +25,7 @@ export default function UserRegistration() {
   const [showPassword, setShowPassword] = useState(false);
   const[redirectingToRegistration,setRedirectingToRegistration]=useState(false)
   const[invalidToken,setInvalidToken]=useState(false)
+  const[isDoctorSelected,setIsDoctorSelected]=useState(true)
   const [formData, setFormData] = useState({
     user: 'Select User',
     staffToken:'',
@@ -47,7 +48,7 @@ export default function UserRegistration() {
     password : '',
     confirmpassword : ''
   });
-  const[isDoctorSelected,setIsDoctorSelected]=useState(true)
+ 
   const handleReatSelectchange = (selectedOption)=>{
     document.getElementById("errcountry").style.display = 'none'
     setSelectedCountry(selectedOption)

@@ -26,7 +26,7 @@ const StaffRegistration = () => {
   const [loading, setLoading] = useState(false);
   const [showOTPConfirmation, setShowOTPConfirmation] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-  const[submit,setSubmit]=useState(false)
+  
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -99,7 +99,7 @@ const StaffRegistration = () => {
         setLoading(false); // Stop loading
       }, 2000);
     }, 2000);
-    window.sessionStorage.setItem('RegistrationData', JSON.stringify(formValue));
+    window.sessionStorage.setItem('Staff RegistrationData', JSON.stringify(formValue));
    }
   };
   const HandleOnFocus=()=>{
@@ -113,21 +113,7 @@ const StaffRegistration = () => {
   <>
     <div className='container-fluid  staffForm'>
       <h1 className='  text-center '>Staff Registration</h1>
-      {submit && (<Modal
-        show={show}
-        onHide={handleClose}
-        dialogClassName="modal-90w" // Adjust the width of the modal
-          aria-labelledby="example-custom-modal-styling-title"
-          centered
-      >
-        <Modal.Header closeButton>
-        </Modal.Header>
-        <Modal.Body>
-         Thankyou For Register 
-        </Modal.Body>
-       
-         
-      </Modal>)}
+     
     <form  onSubmit={handleSubmit}>
       <div className="row">
       <div class= " col-md-4 ">

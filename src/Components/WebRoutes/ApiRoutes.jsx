@@ -19,8 +19,8 @@ export default function ApiRoutes() {
   return (
     <>
     <Routes>
-   <Route path="/Indiclinicweb" element={<LayoutHome/>} />
-   <Route path="/Login" element={<LayoutLoginPanel/>} />
+   <Route path="/Indiclinicweb" element={<LayoutHome/>}/>
+   <Route path="/Login" element={<LayoutLoginPanel/>}/>
    <Route path="/UserRegistration" element={<LayoutUserRegistration/>} />
    <Route path="/MyDashboard" element={<LayoutMyDashboard/>} />
    <Route path="/Admin" element={<AdminDashboard/>} />

@@ -29,6 +29,7 @@ export default function UserRegistration() {
   const [formData, setFormData] = useState({
     user: 'Select User',
     staffToken:'',
+    staffPhoneNo:'',
     firstName: '',
     lastName: '',
     highestQualification : 'Select Highest Qualification',
@@ -361,7 +362,6 @@ const handleVerifying=()=>{
         <div className="col"  style={{marginTop:'2rem'}}>
           <label htmlFor="inputStaffToken" className="form-label">Staff Token <span className="requireFields">*</span></label>
           <input
-        
             type="text"
             id="inputStaffToken"
             name="staffToken"
@@ -369,6 +369,15 @@ const handleVerifying=()=>{
             className="form-control"
             onChange={handleInputChange}
           />
+ <label htmlFor="inputStaffPhoneNo" className="form-label">Enter Your  Mobile Number<span className="requireFields">*</span></label>
+         <input
+        type="number"
+        id="inputStaffPhoneNo"
+        name="staffPhoneNo"
+        value={formData.staffPhoneNo}
+        className="form-control"
+        onChange={handleInputChange}
+      />
           <button type='button 'Class="btn btn-primary mt-4"  onClick={handleVerifying}>Verify <img src=""  /></button>
 
          {redirectingToRegistration &&<div class="alert alert-success mt-4" role="alert">

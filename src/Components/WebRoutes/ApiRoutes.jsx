@@ -11,6 +11,7 @@ import LayoutStaffAttendance from '../DoctorSidebarPages/Layouts/LayoutStaffAtte
 import LayoutStaffRegistration from '../Staff/Layout/LayoutStaffRegistration'
 import LayoutAppointments from '../DoctorSidebarPages/Layouts/LayoutAppointments'
 import Billing from '../Home/Pages/Billing'
+import  StaffLogin from '../Staff/Pages/StaffLogin'
 
 // import BillingPractice from '../Home/Pages/BillingPractice'
 
@@ -30,8 +31,9 @@ export default function ApiRoutes() {
    <Route path="/ManageClinic" element={<LayoutManageClinic/>} />
    <Route path="/StaffRegistration" element={<LayoutStaffRegistration/>} />
    <Route path="/Appointments" element={<LayoutAppointments/>} />
- 
    <Route path="/Billing" element={<Billing/>} />
+   <Route path="/StaffLogin" element={<StaffLogin/>} />
+
   
    
 </Routes>

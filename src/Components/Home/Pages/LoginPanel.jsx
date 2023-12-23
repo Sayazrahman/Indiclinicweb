@@ -83,6 +83,9 @@ export default function LoginPanel() {
       const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
       };
+      if (userType === 'Staff') {
+        return <StaffLogin/>;
+      }
   return (
  <>
  <section>
@@ -102,10 +105,7 @@ export default function LoginPanel() {
       <option>Staff</option>
     </select>
     </div>
-    {userType === 'Staff'? (
-             
-              <StaffLogin  />
-            ):<><div className='inputfield'>
+  <div className='inputfield'>
    
             <input value={email} name='Email' type='text' placeholder='Email or Phone No.' onChange={handleOnchange}/><br></br>
              <span id="emailValidation" class="invalid-feedback mx-2" style={{display: 'none'}}></span>
@@ -124,7 +124,7 @@ export default function LoginPanel() {
          <button className='btn btn-sucess mainLoginbutton'  onClick={handleLogin}>Login</button>
 <hr/>
 <button className='btn btn OtpmainBtn'>Login through OTP</button>  
-    </div></>}
+    </div>
    
 
 <div className='mt-5' style={{display: 'flex',justifyContent: 'center'}}>

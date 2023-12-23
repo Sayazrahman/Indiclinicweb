@@ -25,15 +25,12 @@ export default function HomePage() {
    
 <div class="container">
 <div class="row align-items-center">
-<div class="col-lg-6" style={{    boxShadow: "0 9px 11px #1d499914",background: 'white'}}>
+<div class="col-lg-6">
 <div class="banner-content aos aos-init aos-animate" data-aos="fade-up">
 <h1>Empowering Healthcare Professionals ,<span> Welcome to IndiClinic </span> Your Partner in Clinic Management.</h1>
 
-{/* <a href="booking.html" class="btn">Start a Consult</a> */}
 </div>
-<div class="search-box-one aos aos-init aos-animate" data-aos="fade-up">
 
-</div>
 </div>
 <div class="col-lg-6">
 <div class="banner-img aos aos-init aos-animate" data-aos="fade-up">

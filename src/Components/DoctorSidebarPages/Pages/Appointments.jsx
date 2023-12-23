@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from 'react'
 import Ayaz from '../../../assets/Ayaz.jpg'
+import filter from '../../../assets/Icons/adjustments.png'
 
 export default function Appointments(props) {
 const [HomeappointmentSelect, setHomeappointmentSelect] = useState(true);
@@ -64,7 +65,19 @@ const onlineAppointments = [
 {HomeappointmentSelect && (
   <>
   <div className="mt-5">
-  <table className="table table-striped border">
+  <div className="appointmentbtn">
+          <div className='d-flex'>
+            <button>Today</button>
+            <button className='mx-2'>Tomorrow</button>
+            <button>View All</button>
+
+          </div>
+          <div className='filterBtn'>
+          <img title='Filter Appointments' src={filter}/>
+            </div>
+         
+        </div>
+  <table className="table table-striped ">
       <thead>
         <tr>
           <th>#</th>
@@ -99,6 +112,9 @@ const onlineAppointments = [
           <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
             <i className="bi bi-x me-1"></i>
           </button>
+          <button className='ms-2' style={{ background: 'rgb(253 255 145 / 65%)', color: '#02490e' ,border: 'none'}}>
+            <i title='Reschedule' class="bi bi-calendar-week"></i>
+          </button>
         </div>
             </td>
            
@@ -113,7 +129,19 @@ const onlineAppointments = [
 {OnlineappointmentSelect && (
   <>
     <div className="mt-5">
-  <table className="table table-striped border">
+    <div className="appointmentbtn">
+          <div className='d-flex'>
+            <button>Today</button>
+            <button className='mx-2'>Tomorrow</button>
+            <button>View All</button>
+
+          </div>
+          <div className='filterBtn'>
+          <img title='Filter Appointments' src={filter}/>
+            </div>
+         
+        </div>
+  <table className="table table-striped">
       <thead>
         <tr>
           <th>#</th>
@@ -147,6 +175,9 @@ const onlineAppointments = [
           </button>
           <button style={{ background: 'rgba(242, 17, 54, 0.12)', color: 'red' ,border: 'none'}}>
             <i className="bi bi-x me-1"></i>
+          </button>
+          <button className='ms-2' style={{ background: 'rgb(253 255 145 / 65%)', color: '#02490e' ,border: 'none'}}>
+            <i title='Reschedule' class="bi bi-calendar-week"></i>
           </button>
         </div>
             </td>

@@ -3,7 +3,6 @@ import HomeLogo from '../../../assets/HomeLogo.jpg'
 export default function Footer() {
   return (
     <>
-    
     <footer className='footer'>
     <div className="footerContainer mt-2">
         <div className='aboutSection'>

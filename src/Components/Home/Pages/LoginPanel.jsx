@@ -4,14 +4,16 @@ import loginPage from "../../../assets/LoginPage.jpg"
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import LoadinGif from '../../../assets/Icons/1496.gif'
+import StaffLogin from '../../Staff/Pages/StaffLogin'
 export default function LoginPanel() {
   const navigate = useNavigate()
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
+    const [userType, setUserType] = useState('Select User');
     const [showModal, setShowModal] = useState(false);
      const [loading, setLoading] = useState(false);
+     
 
   
 
@@ -19,15 +21,17 @@ export default function LoginPanel() {
         document.getElementById("emailValidation").style.display = "none";
         document.getElementById("passwordValidation").style.display = "none";
         const {name,value} = e.target
+        if (name==='user') {
+          setUserType(value);
+        } 
     if(name === "Email"){
         setemail(value)
     }
     else if (name === "password"){
         setpassword(value)
     }
+   
     }
-
-  
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
       
     
@@ -79,10 +83,13 @@ export default function LoginPanel() {
       const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
       };
+      if (userType === 'Staff') {
+        return <StaffLogin/>;
+      }
   return (
  <>
  <section>
-    <div className='loginBody'>
+    <div className='  loginBody'>
         <div className='container mainContainer mt-4'>
 <div className='mt-2 navlogo'>
     <img src={loginPage} ></img>
@@ -92,33 +99,33 @@ export default function LoginPanel() {
     <div className='headingContainer mt-5'><h3 className='me-2'>Login</h3><span><h3 className='me-2' style={{color: 'rgb(51 198 207)',fontWeight: 'bolder',textDecoration: 'underline'}}>Indi </h3></span><span><h3 style={{color: 'rgb(0 159 255)',fontWeight: 'bolder',textDecoration: 'underline'}}> Clinic</h3></span></div>
     <div className="col-md-4 ms-3">
     <label for="inputUser" className="form-label">Login As <span className="requireFields" >*</span></label>
-    <select id="inputUser" name="user"  className="form-select" >
+    <select id="inputUser" name="user" value={userType} className="form-select"  onChange={(e) => setUserType(e.target.value)}>
       <option selected>Select User</option>
-      <option>Patient</option>
       <option>Doctor</option>
       <option>Staff</option>
     </select>
     </div>
-    <div className='inputfield'>
+  <div className='inputfield'>
    
- <input value={email} name='Email' type='text' placeholder='Email or Phone No.' onChange={handleOnchange}/><br></br>
-  <span id="emailValidation" class="invalid-feedback mx-2" style={{display: 'none'}}></span>
-<input value={password} name='password' className='mt-3' type={showPassword ? 'text' : 'password'} onChange={handleOnchange} placeholder='Password'/>
-  <span  onClick={togglePasswordVisibility} >
-            {showPassword ? (
-              <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} />// Replace with your eye icon
-            ) : (
-              <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} /> // Replace with your eye icon
-            )}
-          </span>
-  <span id="passwordValidation" class="invalid-feedback mx-4" style={{display: 'none'}}></span>
-    </div>
-    <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
+            <input value={email} name='Email' type='text' placeholder='Email or Phone No.' onChange={handleOnchange}/><br></br>
+             <span id="emailValidation" class="invalid-feedback mx-2" style={{display: 'none'}}></span>
+           <input value={password} name='password' className='mt-3' type={showPassword ? 'text' : 'password'} onChange={handleOnchange} placeholder='Password'/>
+             <span  onClick={togglePasswordVisibility} >
+                       {showPassword ? (
+                         <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} />// Replace with your eye icon
+                       ) : (
+                         <img src={eye} style={{position: 'relative', top: '-35px',left: '450px'}} /> // Replace with your eye icon
+                       )}
+                     </span>
+             <span id="passwordValidation" class="invalid-feedback mx-4" style={{display: 'none'}}></span>
+               </div>
+               <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
     <div style={{margin: 'auto',textAlign: 'center'}}>
          <button className='btn btn-sucess mainLoginbutton'  onClick={handleLogin}>Login</button>
 <hr/>
 <button className='btn btn OtpmainBtn'>Login through OTP</button>  
     </div>
+   
 
 <div className='mt-5' style={{display: 'flex',justifyContent: 'center'}}>
     <h6 style={{fontWeight: 'bold'}}>Don't have an account ?</h6><span><h6 className='ms-1' style={{color: 'green',fontWeight: 'bolder',cursor: 'pointer',textDecoration: 'underline'}}> Register Now</h6></span>

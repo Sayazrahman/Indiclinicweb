@@ -77,8 +77,8 @@ const onlineAppointments = [
             </div>
          
         </div>
-  <table className="table table-striped ">
-      <thead>
+  <table className="table align-middle mb-0 bg-white">
+      <thead class="bg-light">
         <tr>
           <th>#</th>
           <th>P.ID</th>

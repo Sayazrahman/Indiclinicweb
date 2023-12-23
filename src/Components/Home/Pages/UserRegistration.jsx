@@ -366,9 +366,11 @@ const handleVerifying=()=>{
             name="staffToken"
             value={formData.staffToken}
             className="form-control"
+            placeholder='Enter Staff Token'
             onChange={handleInputChange}
           />
           <button type='button 'Class="btn btn-primary mt-4"  onClick={handleVerifying}>Verify <img src=""  /></button>
+          <h6>Note : </h6>
 
          {redirectingToRegistration &&<div class="alert alert-success mt-4" role="alert">
             Verified

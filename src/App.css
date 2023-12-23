@@ -1015,7 +1015,7 @@ body.sidebar-open {
 }
 .main-box-registration{
   padding-top : 10px;
-  justify-content: center;
+  justify-content: space-around;
 }
 .registration-banner img{
   width: 40vw;

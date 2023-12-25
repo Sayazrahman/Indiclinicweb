@@ -96,7 +96,7 @@ export default function LoginPanel() {
 </div>
 
 <div className='inputContainer mt-2'>
-    <div className='headingContainer mt-5'><h3 className='me-2'>Login</h3><span><h3 className='me-2' style={{color: 'rgb(51 198 207)',fontWeight: 'bolder',textDecoration: 'underline'}}>Indi </h3></span><span><h3 style={{color: 'rgb(0 159 255)',fontWeight: 'bolder',textDecoration: 'underline'}}> Clinic</h3></span></div>
+    <div className='headingContainer mt-5'><h3 className='me-2'>Login</h3><span><h3 className='me-2' style={{color: 'rgb(51 198 207)',fontWeight: 'bolder'}}>Indi </h3></span><span><h3 style={{color: 'rgb(0 159 255)',fontWeight: 'bolder'}}> Clinic</h3></span></div>
     <div className="col-md-4 ms-3">
     <label for="inputUser" className="form-label">Login As <span className="requireFields" >*</span></label>
     <select id="inputUser" name="user" value={userType} className="form-select"  onChange={(e) => setUserType(e.target.value)}>
@@ -121,9 +121,9 @@ export default function LoginPanel() {
                </div>
                <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
     <div style={{margin: 'auto',textAlign: 'center'}}>
-         <button className='btn btn-sucess mainLoginbutton'  onClick={handleLogin}>Login</button>
+         <button className='mainLoginbutton'  onClick={handleLogin}>Login</button>
 <hr/>
-<button className='btn btn OtpmainBtn'>Login through OTP</button>  
+<button className='OtpmainBtn'>Login through OTP</button>  
     </div>
    
 

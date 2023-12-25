@@ -31,7 +31,7 @@ export default function HomeNavbar() {
           <Link to= '/Indiclinicweb'> <img className='HomeNavLogo'  src={HomeLogo} alt='Logo' style={{cursor: 'pointer'}} /> </Link> 
         </div>
 
-        <div className='collapse navbar-collapse' id='navbarNav'>
+        <div className='collapse navbar-collapse justify-content-center' id='navbarNav'>
           <ul className='navbar-nav ml-auto ms-5'>
             <li className='nav-item'>
               <Link
@@ -87,7 +87,7 @@ export default function HomeNavbar() {
             
             <Link className='nav-item' to= "/UserRegistration">Signup</Link> 
           </button>
-          <button className='btn btn-success navbtn mt-1' > <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
+          <button className='navbtn mt-1' > <img className='me-2'src={LoginLogo} alt='Login Icon' style={{width: '1vw', height : '1vw'}}/>  <Link className='nav-item' to= "/Login">Login</Link></button>
         </div>
       </nav>
     </div>

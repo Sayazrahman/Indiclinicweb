@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import{ Modal ,Button}from 'react-bootstrap'
 import OTPConfirmation from '../../OTPConfirmation'
 import LoadinGif from '../../../assets/Icons/1496.gif'
+import Staff from '../../../assets/Icons/staffregister.png'
+import reset from '../../../assets/Icons/reset.png'
 import RegistrationModal from '../../RegistrationModal';
 const StaffRegistration = () => {
   
@@ -111,11 +113,11 @@ const StaffRegistration = () => {
 
   return (
   <>
-    <div className='container-fluid  staffForm'>
-      <h1 className='  text-center '>Staff Registration</h1>
+    <div className='container-fluid  staffForm px-5 mb-5'>
+      <div className='text-center layout-staff'>Staff Registration</div>
      
-    <form  onSubmit={handleSubmit}>
-      <div className="row mb-5">
+    <form className='layoutForm-staff' onSubmit={handleSubmit}>
+      <div className="row p-5">
       <div class= " col-md-4 ">
     <label for="FirstName" class="form-label">First Name</label>
     <input type="text" class="form-control"  placeholder='First Name'id='FirstName' name='FirstName'  value={formValue.FirstName} onChange={HandleOnChange} onFocus={HandleOnFocus}/>
@@ -224,9 +226,9 @@ const StaffRegistration = () => {
       </label>
     </div>
   </div>
-   <div className="col-12 mt-3" style={{textAlign: 'center'}}>
-    <button type="submit" className="btn btn col-md-5 me-2 signup" style={{background: 'rgb(142 249 142)', fontWeight: 'bolder',borderRadius: '2px',width:'9rem'}} onClick={handleShow}>Register</button>
-    <button type="reset" className="btn btn col-md-5 me-2" style={{background: '#ff7b7b',fontWeight: 'bolder',borderRadius: '2px',width:'9rem'}}>Reset</button>
+   <div className="col-12 mt-3" style={{textAlign: 'right'}}>
+    <button type="submit" className="btn btn col-md-5 me-2 signup" style={{background: 'rgb(142 190 249)', fontWeight: 'bolder',borderRadius: '12px',width:'9rem'}} onClick={handleShow}><img src={Staff} /> Register</button>
+    <button type="reset" className="btn btn col-md-5 me-2" style={{background: 'rgb(255 79 79)',fontWeight: 'bolder',borderRadius: '12px',width:'9rem'}}><img src = {reset} /> Reset</button>
   </div>
   </div>
 </form>

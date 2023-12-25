@@ -83,7 +83,7 @@ export default function Chart() {
   }, []);
 
   return (
-    <figure className="highcharts-figure mt-4" style={{width : '60vw' , margin : 'auto'}}>
+    <figure className="highcharts-figure mt-4 col-xxl-2 col-md-6 " style={{  boxShadow: "rgb(120 165 249 / 82%) 0px 2px 20px", }}>
       <div id="container"></div>
       <p className="highcharts-description">
       

@@ -7,6 +7,7 @@ import patientbed from '../../../assets/Icons/patientbed.png'
 import appointment from '../../../assets/Icons/appointment.png'
 import Appointments from './Appointments';
 import Chart from './Chart';
+import PieChart from './PieChart';
 export default function Mystatics(props) {
 
 
@@ -68,8 +69,9 @@ export default function Mystatics(props) {
   
     </div>
 
-    <div className={props.isSidebarOpen ? 'sidebar-close-chart' : ''} style={{  boxShadow: "0 9px 11px #1d499914"}}>
-<Chart/>
+    <div className={props.isSidebarOpen ? 'sidebar-close-chart' : 'row'} >
+  <Chart/>
+  <PieChart/>
     </div>
 
   

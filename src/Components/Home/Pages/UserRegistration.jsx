@@ -359,8 +359,22 @@ const handleVerifying=()=>{
     </div>
 
     {!isDoctorSelected && (
-        <div className="col"  style={{marginTop:'2rem'}}>
-          <label htmlFor="inputStaffToken" className="form-label">Staff Token <span className="requireFields">*</span></label>
+        <div className="row g-3 mt-2">
+          <div className='col md-12'>
+                 <label htmlFor="inputStaffPhoneNo" className="form-label">Enter Your  Mobile Number<span className="requireFields">*</span></label>
+         <input
+        type="number"
+        id="inputStaffPhoneNo"
+        name="staffPhoneNo"
+        placeholder='Enter Mobile Number'
+        value={formData.staffPhoneNo}
+        className="form-control"
+        onChange={handleInputChange}
+      />
+          </div>
+
+     <div className='col-md-12'>
+           <label htmlFor="inputStaffToken" className="form-label">Staff Token <span className="requireFields">*</span></label>
           <input
             type="text"
             id="inputStaffToken"
@@ -370,15 +384,9 @@ const handleVerifying=()=>{
             placeholder='Enter Staff Token'
             onChange={handleInputChange}
           />
- <label htmlFor="inputStaffPhoneNo" className="form-label">Enter Your  Mobile Number<span className="requireFields">*</span></label>
-         <input
-        type="number"
-        id="inputStaffPhoneNo"
-        name="staffPhoneNo"
-        value={formData.staffPhoneNo}
-        className="form-control"
-        onChange={handleInputChange}
-      />
+     </div>
+     
+   
           <button type='button 'Class="btn btn-primary mt-4"  onClick={handleVerifying}>Verify <img src=""  /></button>
           <h6>Note : </h6>
 

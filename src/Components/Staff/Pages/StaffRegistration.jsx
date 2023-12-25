@@ -131,7 +131,7 @@ const StaffRegistration = () => {
 
   <div className="col-md-4 ">
     <label for="Designation" className="form-label">Designation</label>
-    <input type="text" className="form-control" id="designation" name='designation'  placeholder="" value={formValue.Designation} onChange={HandleOnChange} disabled onFocus={HandleOnFocus}/>
+    <input type="text" className="form-control" id="designation" name='designation'  placeholder="Designation" value={formValue.Designation} onChange={HandleOnChange} disabled onFocus={HandleOnFocus}/>
    
   </div>
 

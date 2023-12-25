@@ -121,7 +121,7 @@ export default function LoginPanel() {
                </div>
                <div className='mt-1 me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
     <div style={{margin: 'auto',textAlign: 'center'}}>
-         <button className='mainLoginbutton'  onClick={handleLogin}>Login</button>
+         <button className=' mainLoginbutton'  onClick={handleLogin}>Login</button>
 <hr/>
 <button className='OtpmainBtn'>Login through OTP</button>  
     </div>

@@ -44,7 +44,7 @@ export default function DashboardNavbar(props) {
                     aria-expanded="false"
                   >
                     <span></span>
-                    <img src={Ayaz} style={{width: '2rem', height: '2rem' , borderRadius: '50%'}} /> Dr.Maroof Jilani
+                    <img src={Ayaz} style={{width: '2rem', height: '2rem' , borderRadius: '50%'}} /> Dr.Jilani
                   </button>
                   <ul className="dropdown-menu">
                     <li>Profile Settings</li>

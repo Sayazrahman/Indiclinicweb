@@ -4,12 +4,15 @@ import HomeNavbar from '../Pages/HomeNavbar'
 import Footer from '../Pages/Footer'
 
 
+
 export default function LayoutHome() {
   return (
     <>
+
       <HomeNavbar/>
-    <HomePage/>
+     <HomePage/>
     <Footer/>
+
     </>
   )
 }

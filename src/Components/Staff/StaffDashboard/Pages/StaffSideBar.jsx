@@ -1,51 +1,120 @@
-import React from 'react';
-import {
-    CDBSidebar,
-    CDBSidebarHeader,
-    CDBSidebarMenuItem,
-    CDBSidebarContent,
-    CDBSidebarMenu,
-    CDBSidebarSubMenu,
-    CDBSidebarFooter,
-  } from 'cdbreact';
-  import woman from '../../../../assets//Icons/woman.png'
+import React ,{ useState } from "react";
+import {Link} from 'react-router-dom'
+import woman from "../../../../assets//Icons/woman.png";
 export default function StaffSideBar() {
-  return (
-    <div style={{height: '100vh', position : 'fixed'}}>
-       <CDBSidebar className='custom-sidebar' textColor="white" backgroundColor="rgb(24, 89, 80)">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>
-            <div className='d-flex'>
-            <img src={woman} style={{width: '2rem'}}/>
-            <h6 className='mt-1 ms-2'>Sabeeha Rahman</h6>
-            </div>
-          
-          
-        </CDBSidebarHeader>
-        <CDBSidebarContent>
-          <CDBSidebarMenu>
-            <CDBSidebarMenuItem><i class="bi bi-person-wheelchair me-2"></i> Patients</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem ><i class="bi bi-calendar-week me-2"></i> Schedule Appointment</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem ><i class="bi bi-chat-dots-fill me-2"></i> Chat (Coming soon)</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem><i class="bi bi-card-text me-2"></i> Records</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem><i class="bi bi-bar-chart me-2"></i> Anylytics</CDBSidebarMenuItem>
-            <hr/>
-            <CDBSidebarMenuItem > <i class="bi bi-calendar3-week me-2"></i> Attendance</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="th-large">Leaves</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem ><i class="bi bi-currency-rupee me-2"></i> Finance</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem > <i class="bi bi-person-circle me-2"></i> Manage Profile</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem> <i class="bi bi-box-arrow-right me-2"></i> Logout</CDBSidebarMenuItem>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const currentDate = new Date().toLocaleDateString(undefined, options);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-        <CDBSidebarFooter style={{ textAlign: 'center' }}>
-          <div
-            className="sidebar-btn-wrapper"
-            style={{padding: '20px 5px'}}
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prevState) => !prevState);
+  };
+
+  return (
+    <>
+      <div
+        class="d-flex flex-column flex-shrink-0 p-3 "
+        style={{
+          height: "100vh",
+          position: "fixed",
+          backgroundColor: "rgb(24, 89, 80)",
+          color: "white",
+          overflowY: "auto",
+          marginLeft: isSidebarOpen ? "0" : "-200px",
+          transition: "margin-left 0.3s ease",
+        }}
+      >
+        <div className="d-flex mt-5">
+          <img src={woman} style={{ width: "2rem" }} />
+          <h6 className="mt-1 ms-2 text-light">Sabeeha Rahman</h6>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class=" mx-3 bi bi-list text-light"
+            viewBox="0 0 16 16"
+            onClick={toggleSidebar}
+            style={{ cursor: "pointer" }}
           >
-            Sidebar Footer
-          </div>
-        </CDBSidebarFooter>
-      </CDBSidebar>
-    </div>
-  )
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </div>
+        <p className="text-light fs-6 fst-italic">{currentDate}</p>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto mt-4 ">
+          <li class="nav-item mt-2">
+            <Link to='/LayoutPatient' class="nav-link text-light " aria-current="page">
+              <i class="bi bi-person-wheelchair mx-2"></i>
+              Patients
+            </Link>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link text-light ">
+              <i class="bi bi-table  mx-2"></i>
+              Schedule Appointment
+            </a>
+          </li>
+          <li class="nav-item mt-2 ">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-chat-dots-fill mx-2"></i>
+              Chat (Coming soon)
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-card-heading mx-2"></i>
+              Records
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-bar-chart-fill mx-2"></i>
+              Anylytics
+            </a>
+          </li>
+          <hr />
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-file-earmark-ruled mx-2"></i>
+              Attendance
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-x-diamond-fill mx-2"></i>
+              Leaves
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-currency-rupee mx-2"></i>
+              Finance
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-person-circle mx-2"></i>
+              Manage Profile
+            </a>
+          </li>
+          <li class="nav-item mt-2 mb-5">
+            <a href="#" class="nav-link  text-light">
+              <i class="bi bi-box-arrow-right mx-2"></i>
+              Logout
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </>
+  );
 }

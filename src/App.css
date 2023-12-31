@@ -1971,3 +1971,10 @@ font-size: 16px;
   -ms-transition: 0.5s;
   transition: 0.5s;
 }
+.patientContainer{
+  background-color: rgb(233, 243, 158);
+  height: 100vh;
+}
+.CustomCss{
+  margin-left: 200px;
+}

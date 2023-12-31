@@ -1,9 +1,11 @@
 import React from 'react'
 import eye from "../../../assets/Icons/eye.svg"
-import { useState } from 'react';
+import { useState, } from 'react';
+import { useNavigate } from 'react-router-dom';
 import LoginPanel from '../../Home/Pages/LoginPanel';
 import StaffLoginImage from "../../../assets/StaffLoginImage.jpg"
 const StaffLogin = () => {
+  const navigate = useNavigate();
  
   const [showPassword, setShowPassword] = useState(false);
   const [email, setemail] = useState("");
@@ -24,6 +26,9 @@ else if (name === "Password"){
 }
 if (userType === 'Doctor') {
   return <LoginPanel/>;
+}
+const LinkToStaffDashbord=()=>{
+  navigate('/StaffDashboard')
 }
   return (
     <div className='  loginBody'>
@@ -56,7 +61,7 @@ if (userType === 'Doctor') {
        </span>
        <div className='me-4 forgetPswd' style={{display: 'flex',flexDirection: 'row-reverse',}}><h6 style={{color: '#284c81',fontWeight: 'bolder',cursor: 'pointer',fontFamily: 'monospace'}}>Forget Password?</h6></div>
    <div style={{margin: 'auto',textAlign: 'center'}}>
-   <button className=' mt-4 mainLoginbutton'>Login</button>
+   <button className=' mt-4 mainLoginbutton' onClick={LinkToStaffDashbord}>Login</button>
     </div>   
     <div className='mt-5' style={{display: 'flex',justifyContent: 'center'}}>
     <h6 style={{fontWeight: 'bold'}}>Don't have an account ?</h6><span><h6 className='ms-1' style={{color: 'green',fontWeight: 'bolder',cursor: 'pointer',textDecoration: 'underline'}}> Register Now</h6></span>

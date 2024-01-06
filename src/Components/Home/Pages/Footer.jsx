@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className='footer'>
     <div className="footerContainer mt-2">
         <div className='aboutSection'>
-        <img className='HomeNavLogo mt-4' src={HomeLogo}/>
+        <img className='mt-4' src={HomeLogo}/>
         <div className = "info"><p >Your one-stop destination for healthcare. Find trusted doctors, book appointments, consult online, and purchase medicines conveniently. Your well-being, our priority</p></div>
         </div>
         <div className='mt-4'>
@@ -34,8 +34,8 @@ export default function Footer() {
     </div>
     <hr/>
     <div className='footerTerms mt-4'>
-<div>Copyright © 2023 Indiclinic.com. All Rights Reserved</div>
-<div style={{cursor: 'pointer'}}>Privacy Policy | Terms and Conditions</div>
+<div style={{color: 'white'}}>Copyright © 2023 Indiclinic.com. All Rights Reserved</div>
+<div style={{cursor: 'pointer',color: 'white'}}>Privacy Policy | Terms and Conditions</div>
     </div>
  </footer>
     </>

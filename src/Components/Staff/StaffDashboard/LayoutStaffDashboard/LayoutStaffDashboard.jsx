@@ -6,11 +6,11 @@ export default function LayoutStaffDashboard() {
   return (
 <>
 <StaffHeader/>
+<div className="d-flex">
 <StaffSideBar/>
-<div style={{width: '80vw' , marginLeft: 'auto'}}>
     <StaffMainContent/>
-</div>
 
+</div>
 
 </>
   )

@@ -7,8 +7,10 @@ const LayoutPatient = () => {
   return (
     <div>
       <StaffHeader/>
-      <StaffSideBar/>
+      <div className="d-flex ">
+       <StaffSideBar/>
      <Patient/>
+     </div>
     </div>
   )
 }

@@ -144,7 +144,7 @@ const doctorsList = [
 
 <section className='pt-2 mt-2 px-3'>
 
-  <div className="row">
+  <div className="row" style={{paddingLeft:'100px' , paddingRight: '100px'}}>
 
     {doctorsList && doctorsList.map((val , index)=>{
       return (

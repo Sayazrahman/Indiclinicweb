@@ -19,7 +19,7 @@ export default function HomeNavbar() {
   return (
     <>
    <div className={`MainNav ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-  <header className='header header-custom header-fixed header-one header-space'>
+  <header className='header header-custom header-fixed header-one header-space' style={{position: 'fixed'}}>
     <div className='Navcontainer'>
       <nav className='navbar navbar-expand-lg navbar '>
     

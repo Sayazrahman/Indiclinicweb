@@ -3,14 +3,14 @@ import HomeLogo from '../../../../assets/HomeLogo.jpg'
 import woman from '../../../../assets//Icons/woman.png'
 export default function StaffHeader() {
   return (
-    <nav class="navbar" style={{height: '4rem',background: '#185950'}}>
+    <nav class="navbar" style={{height: '4rem',background: '#185950',}} >
   <div class="container-fluid">
     <div>
-       <img src={HomeLogo} style={{width: '13rem'}}/>  
+       <img src={HomeLogo}className='HomeLogo' style={{width: '13rem'}}/>  
     </div>
  
-<div className='d-flex'>
-    <ul className='d-flex'>
+<div className=' StaffHeaderMenu' >
+    <ul className='d-flex '>
         <li className='staff-nav-list'><i class="bi bi-pc-display-horizontal me-2"></i>Dashboard</li>
         <li className='staff-nav-list'><i class="bi bi-person-wheelchair me-2"></i>Patients</li>
         <li className='staff-nav-list'><i class="bi bi-bar-chart-line-fill me-2"></i>Analytics</li>

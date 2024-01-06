@@ -6,14 +6,14 @@ export default function PieChart() {
 
     const data = [
         ["Task", "Hours per Day"],
-        ["Work", 11],
-        ["Eat", 2],
-        ["Commute", 2],
-        ["Watch TV", 2],
-        ["Sleep", 7], // CSS-style declaration
+        ["Common Cold", 11],
+        ["Covid", 2],
+        ["Stomach disease", 2],
+        ["Typhoid", 2],
+        ["Dengue", 7], 
       ];
       const options = {
-        title: "My Daily Activities",
+        title: "Patient diagnosed Today",
         pieHole: 0.4,
         is3D: false,
       };

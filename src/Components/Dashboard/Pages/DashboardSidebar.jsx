@@ -26,7 +26,7 @@ export default function DashboardSidebar(props) {
      <div className='doctorprofilesidebar'>
   <div className='drProfile'>
 <img src={Ayaz} />
-<div className='mt-1'><h6 style={{color: 'white'}}>Dr. Maroof Jilani</h6></div>
+<div className='mt-1'><h6 style={{color: 'white'}}>Dr.Jilani</h6></div>
 <div className='mt-1'><p>MBBS, MD - </p></div>
 
   </div>

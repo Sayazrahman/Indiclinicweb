@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Indiclinicweb/static/css/main.f05e26c6.css",
+    "main.js": "/Indiclinicweb/static/js/main.0372607c.js",
+    "static/js/787.ab0d53d4.chunk.js": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js",
+    "static/media/1496.gif": "/Indiclinicweb/static/media/1496.d853407d2bf65bb4deef.gif",
+    "static/media/doctor-banner.png": "/Indiclinicweb/static/media/doctor-banner.b5c05e05c35b2bf2820c.png",
+    "static/media/doctor5.jpg": "/Indiclinicweb/static/media/doctor5.006739d985deae184d35.jpg",
+    "static/media/HomeLogo.jpg": "/Indiclinicweb/static/media/HomeLogo.7d1ef6f2f4f421420684.jpg",
+    "static/media/work-img.png": "/Indiclinicweb/static/media/work-img.675546d68eb2667b81e4.png",
+    "static/media/Cardiology.png": "/Indiclinicweb/static/media/Cardiology.c9b322309cfd79d2fabb.png",
+    "static/media/LoginPage.jpg": "/Indiclinicweb/static/media/LoginPage.38f4f98c132d04f440b4.jpg",
+    "static/media/doctor 6.jpg": "/Indiclinicweb/static/media/doctor 6.940bf72c441a0c6f5903.jpg",
+    "static/media/doctor1.png": "/Indiclinicweb/static/media/doctor1.ea3f89c7e3d89da91b98.png",
+    "static/media/Ayaz.jpg": "/Indiclinicweb/static/media/Ayaz.914c1c1e735aaecabb8f.jpg",
+    "static/media/doctor3.jpg": "/Indiclinicweb/static/media/doctor3.c782dd3a1f1d0eca8f61.jpg",
+    "static/media/doctor4.jpg": "/Indiclinicweb/static/media/doctor4.54296fd97dc97c82b261.jpg",
+    "static/media/doctor2.jpg": "/Indiclinicweb/static/media/doctor2.c1bac09258fe5c0c7b15.jpg",
+    "static/media/OnlineConsulatnt.png": "/Indiclinicweb/static/media/OnlineConsulatnt.932fe15ad0acf6ad1128.png",
+    "static/media/StaffLoginImage.jpg": "/Indiclinicweb/static/media/StaffLoginImage.9778a2c21bf7dd23a62e.jpg",
+    "static/media/registration-banner.png": "/Indiclinicweb/static/media/registration-banner.6da1b2288d7aa50df129.png",
+    "index.html": "/Indiclinicweb/index.html",
+    "static/media/eye.svg": "/Indiclinicweb/static/media/eye.e99d74334ad6397152628e2098cbc42b.svg",
+    "static/media/header-icon.svg": "/Indiclinicweb/static/media/header-icon.feec8826880c6b9a1ef1a18d586f6466.svg",
+    "static/media/user-regular.svg": "/Indiclinicweb/static/media/user-regular.d8ba21172bdc52be1b1da839e8fc2307.svg",
+    "static/media/lock-solid.svg": "/Indiclinicweb/static/media/lock-solid.e87aad8fe7fe0fa31647cec2cc852ba9.svg",
+    "static/media/arrow-counterclockwise.svg": "/Indiclinicweb/static/media/arrow-counterclockwise.48745dc8e6d9b1a2f8ec987bc9867fdf.svg",
+    "static/media/chevron-down.svg": "/Indiclinicweb/static/media/chevron-down.8624f04faf16b2d07c00235d9dc68ae2.svg",
+    "main.f05e26c6.css.map": "/Indiclinicweb/static/css/main.f05e26c6.css.map",
+    "main.0372607c.js.map": "/Indiclinicweb/static/js/main.0372607c.js.map",
+    "787.ab0d53d4.chunk.js.map": "/Indiclinicweb/static/js/787.ab0d53d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f05e26c6.css",
+    "static/js/main.0372607c.js"
+  ]
+}
